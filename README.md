@@ -11,20 +11,10 @@ cd rice.dev-edition-default
 git init
 git remote add origin git@github.com:runarsf/fried-rice.git
 git pull origin main
-# If there are conflicting files, remove local conflicts (see below)
+# If there are conflicting files, remove local conflicts and pull again
 git checkout main
 git branch --set-upstream-to=origin/main main
 ```
-
-> error: The following untracked working tree files would be overwritten by checkout:
->   user.js
-> Please move or remove them before you switch branches.
-> Aborting
-> > ```bash
-> > rm -f user.js
-> > git pull
-> > ```
-
 
 ### New profile
 
