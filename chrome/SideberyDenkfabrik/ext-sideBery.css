@@ -1,0 +1,111 @@
+#root{
+/* This is a fallback bg image in case Dark Mode / Light Mode won't get recognized properly */
+  --bg: transparent !important;
+  background-image: url(https://i.imgur.com/Li0knJQ.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  /* Adjust Tab Vertical Size */
+  --tabs-height: 43px;
+}
+
+/* LIGHT MODE SETTINGS */
+
+@media (prefers-color-scheme:light) {
+  #root {
+  --bg: transparent !important;
+  background-image: url(https://i.imgur.com/4dhK81E.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  --tabs-activated-bg: rgb(237, 243, 250) !important;
+  }
+  .NavigationBar {
+    background-color: rgb(249, 249, 251) !important;
+    }
+
+  .NavigationBar .panel-btn[data-active="true"] {
+   border-radius: 15px !important;
+}
+
+  .NavigationBar {
+    padding: 4.5px !important;
+    }
+}
+
+/* DARK MODE SETTINGS */
+
+@media (prefers-color-scheme:dark) {
+  #root {
+  --bg: transparent !important;
+  background-image: url(https://i.imgur.com/azf836Y.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+  --tabs-fg: rgb(212, 212, 212) !important;
+  --tabs-bg-hover: rgb(131, 139, 158)!important;
+  --tabs-activated-bg: rgb(127, 139, 168) !important;
+  --nav-btn-activated-bg: rgb(31, 34, 47) !important;
+  }
+  .NavigationBar {
+      background-color: rgb(11, 13, 21) !important;
+      }
+
+    #tabs .tabs-actiaved-bg {
+    background-color: rgb(66, 56, 113) !important;
+    }
+
+/* Next Two rules adjust Navbar Panel Button Styling */
+  .NavigationBar .panel-btn[data-active="true"] {
+   border-radius: 15px !important;
+   background-color: rgb(31, 34, 47) !important;
+}
+  .Sidebar .panel-btn > svg,
+.Sidebar .panel-btn > img {
+ fill:rgb(104, 114, 157);
+}
+
+.Sidebar .settings-btn > svg {
+fill: rgb(160, 168, 200) !important;
+}
+}
+/* GENERAL SETTINGS */
+
+/* Align Sidebery NavBar Height with Firefox Toolbar Height */
+  .NavigationBar {
+    padding: 4.5px !important;
+    }
+
+.Tab .title {
+    overflow: hidden;
+    }
+    
+    .Tab[data-active] {
+        background-color:var(--tabs-activated-bg);
+        border:var(--tabs-activated-border);
+        box-shadow:var(--tabs-activated-shadow)
+
+    }
+      
+    #nav{
+        --nav-btn-bg: color: #112793ff !important;
+    }
+    
+    #tabs .tabs-actiaved-bg {
+        background-color: rgb(249, 249, 251) !important;
+
+        }
+    
+    
+.Tab {
+    margin: 2px 5px 2px 10px;
+    width: 90%;
+    border-radius: 3px;
+    color: yellow;
+}
+
+.Sidebar .panel-btn {
+opacity: 100% !important;
+}
+

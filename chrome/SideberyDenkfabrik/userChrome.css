@@ -1,0 +1,85 @@
+:root {
+  --sidebar-width: 250px;
+  --toolbar-height: 0px;
+  --menubar-height: -41px;
+  --toolmenubar-height: -41px; /* sum of previous two */
+}
+/* lock sidebar to height by doing the inverse margin of the toolbar element */
+#sidebar-box {
+  z-index: 1000 !important;
+  position: relative!important;
+  margin-top: var(--menubar-height) !important;
+  border-right: 1px solid #ccc;
+}
+
+#main-window[title^="Firefox Developer Edition"] #sidebar-box {
+  margin-top: var(--toolmenubar-height) !important;
+}
+
+/* lock sidebar to specified width */
+#sidebar-box, #sidebar-box #sidebar {
+    min-width: var(--sidebar-width) !important;
+    max-width: var(--sidebar-width) !important;
+}
+toolbar#nav-bar {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-left: var(--sidebar-width);
+  padding-left: 7px;
+  background: #323234;
+}
+#titlebar {
+    visibility: collapse;
+}
+#TabsToolbar {
+    visibility: collapse;
+}
+#nav-bar { 
+    padding-right: 150px; 
+    padding-left: 10px;
+    background: #323234;
+}
+#TabsToolbar .titlebar-buttonbox-container {
+    visibility: visible !important;
+    position: absolute;
+display: block;
+    top: 6px;
+    right: 0;
+    bottom: 6px;
+}
+#sidebar-header {
+  visibility: collapse !important;
+} 
+/* Fix back button, dann sieht er kleiner aus */
+#back-button>.toolbarbutton-icon {
+transform: scale(.85, .85) !important;
+animation: none !important;
+border: none !important;
+box-shadow: none !important;
+}
+
+#back-button:not(:hover),
+#back-button:not(:hover) > .toolbarbutton-icon {
+background: none !important;
+}
+
+#back-button:hover,
+#back-button:hover > .toolbarbutton-icon {
+border-radius: 2px !important;
+}
+/* Verschiedene Knöpfe hiden, im URL Feld und für die Extensions, muss man aber aufpassen weil man dann nicht mehr einfach alle anklicken kann sondern nur die, die man rausgezogen hat */
+#library-button {
+    display: none !important;
+}
+#page-action-buttons {
+    display: none !important;
+}
+#tracking-protection-icon-container {
+    display: none !important;
+}
+#urlbar-input-container {
+}
+
+#navigator-toolbox::after {
+  border-bottom: 0px !important;
+}

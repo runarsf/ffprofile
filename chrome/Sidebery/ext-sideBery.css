@@ -1,0 +1,238 @@
+/**
+ * --bg: #0B0A0D;
+ */
+
+#root {
+  /* --bg: var(--sidebar-background-color) !important;
+  --tabs-height: 43px; */
+}
+
+/* Light mode */
+@media (prefers-color-scheme:light) {
+  #root {
+    --tabs-activated-bg: rgb(237, 243, 250) !important;
+  }
+  .NavigationBar {
+    background-color: rgb(249, 249, 251) !important;
+  }
+  .NavigationBar .panel-btn[data-active="true"] {
+    border-radius: 15px !important;
+  }
+  .NavigationBar {
+    padding: 4.5px !important;
+  }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme:dark) {
+  * {
+    --bg: #0B0A0D;
+    --ctx-menu-bg: #0B0A0D;
+    --ctx-menu-bg-hover: 3363a42;
+    --pinned-dock-overlay-bg: rgba(15,17,26,0.031);
+    --pinned-dock-overlay-shadow: none;
+    --tabs-bg-hover: #0F111A;
+    --tabs-bg-active: #12141f;
+    --tabs-activated-bg: #262a3d;
+  }
+  /*#root {
+    --bg: #0B0A0D !important;
+    --tabs-fg: rgb(212, 212, 212) !important;
+    --tabs-bg-hover: rgb(131, 139, 158)!important;
+    --tabs-activated-bg: rgb(127, 139, 168) !important;
+    --nav-btn-activated-bg: rgb(31, 34, 47) !important;
+  }*/
+  .NavigationBar {
+    background-color: rgb(11, 13, 21) !important;
+  }
+
+  /* Navbar Panel Button Styling */
+  .NavigationBar .panel-btn[data-active="true"] {
+    border-radius: 15px !important;
+    background-color: rgb(31, 34, 47) !important;
+  }
+  .Sidebar .settings-btn > svg,
+  .Sidebar .panel-btn > svg,
+  .Sidebar .panel-btn > img {
+    fill: rgb(104, 114, 157);
+  }
+
+  /*
+  #nav {
+    --nav-btn-bg: color: #112793ff !important;
+  }
+  #tabs .tabs-actiaved-bg {
+    background-color: rgb(249, 249, 251) !important;
+  }
+  .Tab[data-active] {
+    background-color: var(--tabs-activated-bg);
+    border: var(--tabs-activated-border);
+    box-shadow: var(--tabs-activated-shadow)
+  }
+  */
+}
+
+/* Align Sidebery NavBar Height with Firefox Toolbar Height */
+.NavigationBar {
+  padding: 4.5px !important;
+  border: none !important;
+  box-shadow: none;
+  shadow: none;
+  height: 41px;
+}
+
+/*.Tab .title {
+  overflow: hidden;
+}*/
+
+/*.Tab {
+  margin: 2px 5px 2px 10px;
+  width: 90%;
+  border-radius: 3px;
+}*/
+
+/*.Sidebar .panel-btn {
+  opacity: 100% !important;
+}*/
+
+/* --- */
+
+.container {
+  padding-top: 2.5px !important;
+  margin: 0 10px !important;
+  max-width: calc(100% - 10px) !important;
+}
+
+.Tab,
+.PinnedTab {
+  border-radius: 5px;
+  border: 1px solid transparent !important;
+  background: none;
+  box-shadow: none;
+  margin: 4px 10px;
+  /*margin-top: 3px;
+  margin-bottom: 3px;*/
+  text-align: left;
+  transition: width 0.1s !Important;
+  float: right;
+}
+
+.Tab .fav, .PinnedTab .fav {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin: 0 6px 0 6px;
+  opacity: 1 !important;
+}
+
+.PinnedTab .fav {
+  margin-left: 4px;
+}
+
+.Tab:hover .fav,
+.PinnedTab:hover fav {
+  opacity: 1 !important;
+}
+
+.Tab .placeholder,
+.PinnedTab .placeholder {
+  width: 18px;
+  height: 18px;
+}
+
+.Tab[data-active],
+.PinnedTab[data-active] {
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.15) !important;
+}
+
+.Tab .t-box,
+.PinnedTab .title {
+  mask: linear-gradient(-90deg,transparent,#000 25px,#000);
+  /* display: none; */
+}
+
+.Tab .t-box .title,
+.PinnedTab .title {
+  font-size: 14px !important;
+  padding-left: 4px;
+}
+
+.Tab .close,
+.PinnedTab .close {
+  display: none !important;
+}
+
+.Tab .ctx,
+.PinnedTab .ctx {
+  top: 4px;
+  right: auto;
+  left: -11px;
+  width: 2px;
+  height: calc(100% - 10px);
+}
+
+.Tab[data-lvl] { padding-left: 0; }
+.Tab[data-lvl="0"] { max-width: calc(100% - 10px); }
+.Tab[data-lvl="1"] { max-width: calc(100% - 20px); }
+.Tab[data-lvl="2"] { max-width: calc(100% - 30px); }
+.Tab[data-lvl="3"] { max-width: calc(100% - 40px); }
+.Tab[data-lvl="4"] { max-width: calc(100% - 50px); }
+.Tab[data-lvl="5"] { max-width: calc(100% - 60px); }
+.Tab[data-lvl="6"] { max-width: calc(100% - 70px); }
+.Tab[data-lvl="7"] { max-width: calc(100% - 80px); }
+.Tab[data-lvl="8"] { max-width: calc(100% - 90px); }
+
+.PinnedDock {
+  padding-top: 2.5px !important;
+  padding-bottom: 0 !important;
+  margin-bottom: -2.5px;
+}
+.PinnedDock::after {
+  display: none !important;
+  border: none !important;
+}
+.audio {
+  position: absolute;
+  margin-left: -14px;
+  margin-top: 7px;
+  z-index: 10;
+}
+.Tab[data-audible] .t-box, .Tab[data-muted] .t-box {
+  transform: none !important;
+}
+
+@media screen and (max-width: 60px) {
+  .container { 
+    margin: 0px !important;
+    max-width: 50px;
+  }
+
+  .Tab[data-lvl], .PinnedTab[data-lvl] {
+    max-width: 30px;
+    float: left;
+  }
+
+  .panel-btn[data-active="true"] {
+    display: block;
+    display: flex !important;
+    position: absolute !important;
+    background: none !important;
+  }
+
+  .panel-btn {
+    display: none !important;
+  }
+
+  .Sidebar .settings-btn {
+    display: none;
+  }
+
+  .container::after { 
+    margin-left: 16px;
+  }
+
+  .exp {
+    display: none !important;
+  }
+}

@@ -28,6 +28,14 @@ firefox about:profiles
 # Launch profile in new browser
 ```
 
+## Setups
+
+- Tree styles:
+  - https://www.reddit.com/r/FirefoxCSS/comments/rqo5z6/some_people_asked_for_the_css_so_here_is_my_setup/?utm_source=share&utm_medium=web2x&context=3
+  - https://www.reddit.com/r/FirefoxCSS/comments/rmi8dg/yet_another_sidebery_setup/?utm_source=share&utm_medium=web2x&context=3
+  - https://www.reddit.com/r/FirefoxCSS/comments/lx3z12/edgelike_vertical_tabs_but_better_with_continued/?utm_source=share&utm_medium=web2x&context=3
+  - https://github.com/UnlimitedAvailableUsername/Edge-Mimicry-Tree-Style-Tab-For-Firefox?ref=codetea.com
+
 ## Other things
 
 - Check status with many files: `git status -uno` (https://stackoverflow.com/a/57514326)
@@ -37,3 +45,4 @@ firefox about:profiles
   - Developer Edition: `.dev-edition-default`
   - Nightly: `.default-nightly`
 - To only add the files you want, either add everything except the ones you want to [.gitignore](https://github.com/runarsf/fried-rice/blob/main/.gitignore) or `git config --local status.showUntrackedFiles no` and manually add them.
+- Live-debug: enable `Enable browser chrome and add-ons debugging toolboxes` and `Enable remote debugging` in devtools settings -> ctrl+shift+alt+i
