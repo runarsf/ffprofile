@@ -1,12 +1,9 @@
-# Ignore everything
-*
+# Ignore all files and directories in the root
+/*
+/*/
 
 # Except...
 !.gitignore
 !README.md
 !user.js
-!/chrome/*
-!/chrome/*/**
-
-# ...even if they are in subdirectories
-!*/
+!/chrome/
