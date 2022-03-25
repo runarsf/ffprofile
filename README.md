@@ -10,8 +10,10 @@ Replace `rice.dev-edition-default` with your preferred profile (*Root Directory*
 cd rice.dev-edition-default
 git init
 git remote add origin git@github.com:runarsf/fried-rice.git
-git pull
+git pull origin main
 # If there are conflicting files, remove local conflicts
+git checkout main
+git branch --set-upstream-to=origin/main main
 ```
 
 ### New profile
@@ -28,6 +30,7 @@ firefox about:profiles
 
 ## Other things
 
+- Check status with many files: `git status -uno` (https://stackoverflow.com/a/57514326)
 - https://ffprofile.com/
 - https://support.mozilla.org/gl/questions/1264072
   - Default: `.default-release`
