@@ -1,0 +1,12 @@
+# Ignore everything
+*
+
+# Except...
+!.gitignore
+!README.md
+!user.js
+!/chrome/*
+!/chrome/*/**
+
+# ...even if they are in subdirectories
+!*/
