@@ -234,7 +234,7 @@
     visibility: collapse;
   }
 
-  #nav-bar { 
+  #nav-bar {
     padding-right: 150px;
     padding-left: 10px;
     background: #323234;
@@ -268,6 +268,13 @@
         display: none !important;
       }
     }
+  }
+  
+  /** Change icon colors - https://stackoverflow.com/a/50942954
+   * Filter can be generated using this codepen - https://codepen.io/sosuke/pen/Pjoqqp
+   */
+  .toolbarbutton-icon {
+    filter: brightness(0) saturate(100%) invert(43%) sepia(83%) saturate(197%) hue-rotate(191deg) brightness(87%) contrast(89%);
   }
 
   /* Hide UI buttons */
