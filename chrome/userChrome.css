@@ -1,65 +1,4 @@
-:root {
-  --sidebar-width: 250px;
-  --toolbar-height: 0px;
-  --menubar-height: -41px;
-  --toolmenubar-height: -41px; /* sum of previous two */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#browser {
-    position: relative;
-}
-
-
-
-/** ### TABBAR ###
- * Styles with a fox in them are only active when Sidebery is visible -
- * Under Sidebery-settings > Help, add "🦊 " as window prefix.
- */
-@media {
-  #main-window[titlepreface*="🦊 "] .tabbrowser-tab {
-    visibility: collapse !important;
-  }
-  #main-window[titlepreface*="🦊 "] .titlebar-button {
-    height: 40px !important;
-  }
-  #main-window[titlepreface*="🦊 "] #nav-bar:not([customizing="true"]) {
-    margin-top: -40px;
-    margin-right: 137px;
-    box-shadow: none !important;
-  }
-  #main-window[titlepreface*="🦊 "] #titlebar-spacer {
-    background-color: var(--chrome-secondary-background-color);
-  }
-  #main-window[titlepreface*="🦊 "] #titlebar-buttonbox-container {
-    background-color: var(--chrome-secondary-background-color);
-  }
-  #main-window[titlepreface*="🦊 "] .titlebar-color {
-    background-color: var(--toolbar-bgcolor);
-  }
-  
-  #back-button[disabled="true"],
-  #forward-button[disabled="true"] {
-    visibility: collapse;
-  }
-}
-
-
-
-/** ### SIDEBAR ###
+/** --- SIDEBAR {{{
  */
 @media {
   #sidebar-box[sidebarcommand*="tabcenter"] #sidebar-header,
@@ -121,28 +60,28 @@
   [sidebarcommand*="treestyle"] .sidebar-panel #search-box,
   [sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] .sidebar-panel #search-box {
     -moz-appearance: none !important;
-    background-color: rgba(249,249,250,0.1) !important; 
+    background-color: var(--chrome-secondary-background-color) /* rgba(249,249,250,0.1) */ !important; 
     color: inherit !important;
   }
 
   /* Add sidebar divider and give it background */
-@media DISABLED {
-  #sidebar-box[sidebarcommand*="tabcenter"] > #sidebar,
-  #sidebar-box[sidebarcommand*="tabcenter"] > #sidebar-header,
-  #sidebar-box[sidebarcommand*="treestyle"] > #sidebar,
-  #sidebar-box[sidebarcommand*="treestyle"] > #sidebar-header,
-  #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] > #sidebar,
-  #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] > #sidebar-header {
-    background-color: var(--toolbar-bgcolor) !important;
-    /*border-inline: 1px solid var(--sidebar-border-color) !important;*/
-    border-inline: 1px solid var(--chrome-content-separator-color) !important;
-    border-inline-width: 0px 1px;
-  }
-}  
+  @media DISABLED {
+    #sidebar-box[sidebarcommand*="tabcenter"] > #sidebar,
+    #sidebar-box[sidebarcommand*="tabcenter"] > #sidebar-header,
+    #sidebar-box[sidebarcommand*="treestyle"] > #sidebar,
+    #sidebar-box[sidebarcommand*="treestyle"] > #sidebar-header,
+    #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] > #sidebar,
+    #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] > #sidebar-header {
+      background-color: var(--toolbar-bgcolor) !important;
+      /*border-inline: 1px solid var(--sidebar-border-color) !important;*/
+      border-inline: 1px solid var(--chrome-content-separator-color) !important;
+      border-inline-width: 0px 1px;
+    }
+  }  
   
   #main-window[sizemode="fullscreen"] #sidebar-box { --uc-sidebar-width: 1px; }
   #sidebar-box:not([positionend]) > :-moz-locale-dir(rtl),
-    #sidebar-box[positionend] > * { border-inline-width: 1px 0px; }
+       #sidebar-box[positionend] > * { border-inline-width: 1px 0px; }
   #sidebar-box[positionend] { direction: rtl; }
   #sidebar-box[positionend] > * { direction: ltr; }
   #sidebar-box[positionend]:-moz-locale-dir(rtl) { direction: ltr; }
@@ -151,11 +90,11 @@
   /* Move statuspanel to the other side when sidebar is hovered so it doesn't get covered by sidebar */
   #sidebar-box:not([positionend]):hover ~ #appcontent #statuspanel { inset-inline: auto 0px !important; }
   #sidebar-box:not([positionend]):hover ~ #appcontent #statuspanel-label { margin-inline: 0px !important; border-left-style: solid !important; }
-}
+} /* }}} */
 
 
 
-/** ### SIDEBAR ###
+/** --- SIDEBAR {{{
  * url: https://github.com/ranmaru22/firefox-vertical-tabs
  * This version doesn't change the size of the content inside the sidebar when not hovering,
  * meaning the sidebar-app has to have a configured :hover event.
@@ -218,21 +157,141 @@
   #main-window[inFullscreen] #sidebar {
     height: 100vh;
   }
-}
+} /* }}} */
 
 
-  
-/**
- * Toolbar customizations
+
+/** --- TABBAR {{{
+ * Styles with a fox in them are only active when Sidebery is visible (if configured correctly),
+ * under Sidebery-settings > Help, add "🦊 " as window prefix.
+ * Moves tabbar above sidebar.
  */
 @media DISABLED {
-  /* Seems to work against its purpose */
-  @media (max-width: 630px) {
-    #urlbar-container {
-      min-width: 100% !important;
-    }
-    #menubar-items {
-      display: none !important;
+  #main-window[titlepreface*="🦊 "] .tabbrowser-tab {
+    visibility: collapse !important;
+  }
+  #main-window[titlepreface*="🦊 "] .titlebar-button {
+    height: 40px !important;
+  }
+  #main-window[titlepreface*="🦊 "] #nav-bar:not([customizing="true"]) {
+    margin-top: -40px;
+    margin-right: 137px;
+    box-shadow: none !important;
+  }
+  #main-window[titlepreface*="🦊 "] #titlebar-spacer {
+    background-color: var(--chrome-secondary-background-color);
+  }
+  #main-window[titlepreface*="🦊 "] #titlebar-buttonbox-container {
+    background-color: var(--chrome-secondary-background-color);
+  }
+  #main-window[titlepreface*="🦊 "] .titlebar-color {
+    background-color: var(--toolbar-bgcolor);
+  }
+} /* }}} */
+
+
+
+/** --- TABBAR {{{
+ * Moves tabbar to the right of sidebar.
+ */
+@media {
+  :root {
+    --uc-sidebar-width: 48px; /* Same as in SIDEBAR */
+    --uc-sidebar-hover-width: 225px; /* Same as in SIDEBAR */
+    --toolbar-height: 0px;
+    --menubar-height: -41px;
+    --toolmenubar-height: calc(var(--toolbar-height) + var(--menubar-height));
+  }
+
+  #sidebar-box {
+    z-index: 2 !important;
+    position: relative !important;
+    padding-top: 50px; /* Add background to top of sidebar */
+    margin-top: calc(var(--menubar-height) - 50px) !important;
+    border-right: 1px solid #00000000;
+    /* --toolbar-bgcolor, transparent, --chrome-secondary-background-color */
+    background-color: transparent !important; 
+  }
+  
+  /*#main-window[title^="Firefox Developer Edition"] #sidebar-box {
+    margin-top: var(--toolmenubar-height) !important;
+  }*/
+  /*#sidebar-box, #sidebar-box #sidebar {
+    min-width: var(--uc-sidebar-hover-width) !important;
+    max-width: var(--uc-sidebar-hover-width) !important;
+  }*/
+  #PersonalToolbar,
+  toolbar#nav-bar {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-left: var(--uc-sidebar-width);
+    padding-left: 10px;
+    background: #323234;
+  }
+
+  #titlebar,
+  #TabsToolbar {
+    visibility: collapse;
+  }
+
+  #nav-bar { 
+    padding-right: 150px;
+    padding-left: 10px;
+    background: #323234;
+  }
+  #TabsToolbar .titlebar-buttonbox-container {
+    visibility: visible !important;
+    position: absolute;
+    display: block;
+    top: 6px;
+    right: 0;
+    bottom: 6px;
+  }
+} /* }}} */
+
+
+
+/** --- GENERAL {{{
+ */
+@media {
+  #browser {
+    position: relative;
+  }
+  
+  @media DISABLED {
+    /* Seems to work against its purpose */
+    @media (max-width: 630px) {
+      #urlbar-container {
+        min-width: 100% !important;
+      }
+      #menubar-items {
+        display: none !important;
+      }
     }
   }
-}
+
+  /* Hide UI buttons */
+  /*#library-button,*/
+  #back-button[disabled="true"],
+  #forward-button[disabled="true"],
+  #page-action-buttons,
+  #tracking-protection-icon-container {
+    visibility: collapse;
+  }
+  
+  /* Smaller back/forward buttons */
+  #forward-button > .toolbarbutton-icon,
+  #back-button > .toolbarbutton-icon {
+    transform: scale(.85, .85) !important;
+    animation: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 2px;
+  }
+  
+  /* Match Sidebery and navbar border */
+  #nav-bar {
+    margin-bottom: -1px !important;
+    border-bottom: 1px solid #282828 !important;
+  }
+} /* }}} */
