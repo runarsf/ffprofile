@@ -1,6 +1,9 @@
 /** Sections with the same names are generally mutually exclusive.
  * To disable a section, surround it in `@media DISABLED {}`.
  * To enable a section, either remove the media query or give it an empty query (`@media {}`).
+ *
+ * TODO Make icons more readable.
+ * TODO Line under navbar should be moved to below bookmarks bar when visible.
  */
 
 /** --- SIDEBAR {{{
