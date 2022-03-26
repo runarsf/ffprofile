@@ -31,13 +31,15 @@ firefox about:profiles
 ## Setups
 
 - Tree styles:
-  - https://www.reddit.com/r/FirefoxCSS/comments/rqo5z6/some_people_asked_for_the_css_so_here_is_my_setup/?utm_source=share&utm_medium=web2x&context=3
   - https://www.reddit.com/r/FirefoxCSS/comments/rmi8dg/yet_another_sidebery_setup/?utm_source=share&utm_medium=web2x&context=3
-  - https://www.reddit.com/r/FirefoxCSS/comments/lx3z12/edgelike_vertical_tabs_but_better_with_continued/?utm_source=share&utm_medium=web2x&context=3
+  - https://www.reddit.com/r/FirefoxCSS/comments/rqo5z6/some_people_asked_for_the_css_so_here_is_my_setup/?utm_source=share&utm_medium=web2x&context=3
   - https://github.com/UnlimitedAvailableUsername/Edge-Mimicry-Tree-Style-Tab-For-Firefox?ref=codetea.com
+  - https://github.com/ranmaru22/firefox-vertical-tabs
+  - https://www.reddit.com/r/FirefoxCSS/comments/lx3z12/edgelike_vertical_tabs_but_better_with_continued/?utm_source=share&utm_medium=web2x&context=3
 
 ## Other things
 
+- If you're using GitHub Desktop, you have to change ssh-url to http-url, because GH Desktop doesn't use ssh-key authentication: `git remote set-url https://github.com/runarsf/fried-rice.git`
 - Check status with many files: `git status -uno` (https://stackoverflow.com/a/57514326)
 - https://ffprofile.com/
 - https://support.mozilla.org/gl/questions/1264072
