@@ -1,3 +1,8 @@
+/** Sections with the same names are generally mutually exclusive.
+ * To disable a section, surround it in `@media DISABLED {}`.
+ * To enable a section, either remove the media query or give it an empty query (`@media {}`).
+ */
+
 /** --- SIDEBAR {{{
  */
 @media {
