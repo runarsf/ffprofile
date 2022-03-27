@@ -39,7 +39,7 @@
   #sidebar-box[sidebarcommand*="tabcenter"] > #sidebar-splitter,
   #sidebar-box[sidebarcommand*="treestyletab_piro_sakura_ne_jp-sidebar-action"] > #sidebar-splitter,
   #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] > #sidebar-splitter {
-    display: none;
+    display: none !important;
   }
 
   #sidebar-box[sidebarcommand*="tabcenter"] > #sidebar,
@@ -174,7 +174,7 @@
  * under Sidebery-settings > Help, add "🦊 " as window prefix.
  * Moves tabbar above sidebar.
  */
-@media {
+@media DISABLED {
   #main-window[titlepreface*="🦊 "] .tabbrowser-tab {
     visibility: collapse !important;
   }
@@ -182,7 +182,7 @@
     height: 40px !important;
   }
   #main-window[titlepreface*="🦊 "] #nav-bar:not([customizing="true"]) {
-    margin-top: -40px;
+    margin-top: -41px; /* --menubar-height */
     margin-right: 137px;
     box-shadow: none !important;
   }
@@ -202,7 +202,7 @@
 /** --- TABBAR {{{
  * Moves tabbar to the right of sidebar.
  */
-@media DISABLED {
+@media {
   :root {
     --uc-sidebar-width: 48px; /* Same as in SIDEBAR */
     --uc-sidebar-hover-width: 225px; /* Same as in SIDEBAR */
@@ -219,7 +219,7 @@
     margin-top: calc(var(--menubar-height) - 50px) !important;
     border-right: 1px solid #00000000;
     /* --toolbar-bgcolor, transparent, --chrome-secondary-background-color */
-    background-color: transparent !important; 
+    background-color: var(--toolbar-bgcolor) !important; 
   }
   
   /*#main-window[title^="Firefox Developer Edition"] #sidebar-box {
