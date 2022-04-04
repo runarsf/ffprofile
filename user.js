@@ -17,7 +17,7 @@ user_pref("media.block-autoplay-until-in-foreground", true);
 
 user_pref("network.trr.mode", 3);
 
-user_pref("privacy.firstparty.isolate", true);
+// user_pref("privacy.firstparty.isolate", true);
 
 /* Slow YouTube loading
  * https://support.mozilla.org/en-US/questions/1168957#answer-995163
