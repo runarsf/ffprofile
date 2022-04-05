@@ -18,6 +18,7 @@ user_pref("media.block-autoplay-until-in-foreground", true);
 user_pref("network.trr.mode", 3);
 
 // user_pref("privacy.firstparty.isolate", true);
+// privacy.resistFingerprinting
 
 /* Slow YouTube loading
  * https://support.mozilla.org/en-US/questions/1168957#answer-995163
@@ -60,9 +61,8 @@ user_pref("toolkit.scrollbox.verticalScrollDistance", 5);
 */
 
 /* https://ffprofile.com */
-/*
 // Auto-install extensions
-user_pref("extensions.autoDisableScopes", 14);
+// user_pref("extensions.autoDisableScopes", 14);
 
 user_pref("app.normandy.api_url", "");
 user_pref("app.normandy.enabled", false);
@@ -75,6 +75,7 @@ user_pref("browser.crashReports.unsubmittedCheck.autoSubmit", false);
 user_pref("browser.crashReports.unsubmittedCheck.autoSubmit2", false);
 user_pref("browser.crashReports.unsubmittedCheck.enabled", false);
 user_pref("browser.disableResetPrompt", true);
+user_pref("browser.fixup.alternate.enabled", false);
 user_pref("browser.newtab.preload", false);
 user_pref("browser.newtabpage.activity-stream.section.highlights.includePocket", false);
 user_pref("browser.newtabpage.enabled", false);
@@ -90,7 +91,7 @@ user_pref("browser.safebrowsing.malware.enabled", false);
 user_pref("browser.safebrowsing.phishing.enabled", false);
 user_pref("browser.selfsupport.url", "");
 user_pref("browser.send_pings", false);
-user_pref("browser.sessionstore.privacy_level", 0);
+user_pref("browser.sessionstore.privacy_level", 2);
 user_pref("browser.shell.checkDefaultBrowser", false);
 user_pref("browser.startup.homepage_override.mstone", "ignore");
 user_pref("browser.tabs.crashReporting.sendReport", false);
@@ -115,7 +116,6 @@ user_pref("experiments.manifest.uri", "");
 user_pref("experiments.supported", false);
 user_pref("extensions.CanvasBlocker@kkapsner.de.whiteList", "");
 user_pref("extensions.ClearURLs@kevinr.whiteList", "");
-user_pref("extensions.Decentraleyes@ThomasRientjes.whiteList", "");
 user_pref("extensions.FirefoxMulti-AccountContainers@mozilla.whiteList", "");
 user_pref("extensions.TemporaryContainers@stoically.whiteList", "");
 user_pref("extensions.autoDisableScopes", 14);
@@ -128,11 +128,9 @@ user_pref("extensions.screenshots.upload-disabled", true);
 user_pref("extensions.shield-recipe-client.api_url", "");
 user_pref("extensions.shield-recipe-client.enabled", false);
 user_pref("extensions.webservice.discoverURL", "");
-user_pref("media.autoplay.default", 2);
-user_pref("media.eme.enabled", false);
-user_pref("media.gmp-widevinecdm.enabled", false);
+user_pref("media.autoplay.default", 0);
+user_pref("media.autoplay.enabled", true);
 user_pref("media.navigator.enabled", false);
-user_pref("media.peerconnection.enabled", false);
 user_pref("media.video_stats.enabled", false);
 user_pref("network.allow-experiments", false);
 user_pref("network.captive-portal-service.enabled", false);
@@ -144,8 +142,7 @@ user_pref("network.http.speculative-parallel-limit", 0);
 user_pref("network.predictor.enable-prefetch", false);
 user_pref("network.predictor.enabled", false);
 user_pref("network.prefetch-next", false);
-user_pref("privacy.donottrackheader.enabled", true);
-user_pref("privacy.donottrackheader.value", 1);
+user_pref("network.trr.mode", 5);
 user_pref("privacy.trackingprotection.cryptomining.enabled", true);
 user_pref("privacy.trackingprotection.enabled", true);
 user_pref("privacy.trackingprotection.fingerprinting.enabled", true);
@@ -169,7 +166,5 @@ user_pref("toolkit.telemetry.shutdownPingSender.enabled", false);
 user_pref("toolkit.telemetry.unified", false);
 user_pref("toolkit.telemetry.unifiedIsOptIn", false);
 user_pref("toolkit.telemetry.updatePing.enabled", false);
-user_pref("webgl.disabled", true);
 user_pref("webgl.renderer-string-override", " ");
 user_pref("webgl.vendor-string-override", " ");
-*/
