@@ -1,3 +1,5 @@
+@import url("Lepton/userChrome.css");
+
 /** Sections with the same names are generally mutually exclusive.
  * To disable a section, surround it in `@media DISABLED {}`.
  * To enable a section, either remove the media query or give it an empty query (`@media {}`).
@@ -293,7 +295,17 @@
   /*#page-action-buttons,*/
   /*#tracking-protection-icon-container */
   #back-button[disabled="true"],
-  #forward-button[disabled="true"] {
+  #forward-button[disabled="true"],
+  .panel-subview-body toolbarseparator:not(:first-of-type),
+  #appMenu-new-tab-button2,
+  #appMenu-new-window-button2,
+  #appMenu-new-private-window-button2,
+  #appMenu-history-button,
+  #appMenu-passwords-button,
+  #appMenu-print-button2,
+  #appMenu-save-file-button2,
+  #appMenu-find-button2,
+  #appMenu-quit-button2 {
     visibility: collapse;
   }
   
