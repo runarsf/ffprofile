@@ -307,7 +307,13 @@
   #appMenu-find-button2,
   #appMenu-quit-button2,
   #appMenu-zoom-controls2,
-  #appMenu-downloads-button {
+  #appMenu-downloads-button,
+  #toggle_toolbar-menubar,
+  #toolbar-context-selectAllTabs,
+  #toolbar-context-undoCloseTab,
+  #toggle_PersonalToolbar,
+  #toolbar-context-menu menuseparator,
+  #toolbar-context-bookmarkSelectedTab {
     visibility: collapse;
   }
   
