@@ -308,13 +308,34 @@
   #appMenu-quit-button2,
   #appMenu-zoom-controls2,
   #appMenu-downloads-button,
+  #toolbar-context-menu menuseparator,
   #toggle_toolbar-menubar,
   #toolbar-context-selectAllTabs,
   #toolbar-context-undoCloseTab,
   #toggle_PersonalToolbar,
-  #toolbar-context-menu menuseparator,
-  #toolbar-context-bookmarkSelectedTab {
+  #toolbar-context-bookmarkSelectedTab,
+  #context_undoCloseTab,
+  #context_closeTabOptions,
+  #context_closeTab,
+  #tabContextMenu menuseparator:not(:last-of-type),
+  #context_openANewTab,
+  #context_duplicateTab,
+  #context_moveTabOptions,
+  #share-tab-url-item,
+  #context_selectAllTabs,
+  #contentAreaContextMenu menuseparator:not(:last-of-type),
+  #context-undo[disabled="true"],
+  #context-redo[disabled="true"],
+  #context-inspect-a11y,
+  #context-take-screenshot,
+  #context-savepage,
+  #context-viewsource,
+  #context-selectall,
+  #context-sendpagetodevice,
+  #context-back[disabled="true"],
+  #context-forward[disabled="true"] {
     visibility: collapse;
+    /* display: none; */
   }
   
   /* Smaller buttons */
