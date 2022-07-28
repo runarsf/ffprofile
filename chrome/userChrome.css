@@ -305,7 +305,9 @@
   #appMenu-print-button2,
   #appMenu-save-file-button2,
   #appMenu-find-button2,
-  #appMenu-quit-button2 {
+  #appMenu-quit-button2,
+  #appMenu-zoom-controls2,
+  #appMenu-downloads-button {
     visibility: collapse;
   }
   
