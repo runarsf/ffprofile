@@ -56,6 +56,7 @@ user_pref("browser.urlbar.suggest.quicksuggest.sponsored", false);
 user_pref("browser.urlbar.suggest.remotetab", true);
 user_pref("browser.urlbar.suggest.searches", true);
 user_pref("browser.urlbar.suggest.topsites", false);
+user_pref("browser.urlbar.unitConversion.enabled", true);
 
 // Allow extensions to hide tabs
 user_pref("extensions.webextensions.tabhide.enabled", true);
@@ -345,11 +346,6 @@ user_pref("userContent.page.dark_mode",        true); // Need proton_color
 user_pref("userContent.page.proton",           true); // Need proton_color
 
 // ** Useful Options ***********************************************************
-// Integrated calculator at urlbar
-user_pref("browser.urlbar.suggest.calculator", true);
-
-// Integrated unit convertor at urlbar
-// user_pref("browser.urlbar.unitConversion.enabled", true);
 
 // Draw in Titlebar
 // user_pref("browser.tabs.drawInTitlebar", true);
