@@ -175,8 +175,9 @@
  * Styles with a fox in them are only active when Sidebery is visible (if configured correctly),
  * under Sidebery-settings > Help, add "🦊 " as window prefix.
  * Moves tabbar above sidebar.
+ * Doesn't work well with Lepton.
  */
-@media {
+@media DISABLED {
   #main-window[titlepreface*="🦊 "] .tabbrowser-tab {
     visibility: collapse !important;
   }
