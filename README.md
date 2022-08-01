@@ -16,8 +16,8 @@
   - **Ublock Origin**  
     <kbd>Preferences → Filter lists</kbd>  
       <kbd>→ Privacy</kbd>: Enable "ADGuard URL Tracking Protection"  
-      <kbd>→ Custom → Import</kbd>: Enter `https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt`<sup><a href="https://github.com/DandelionSprout/adfilt/blob/master/LegitimateURLShortener.txt">GitHub</a></sup>
-      <kbd>Apply changed</kbd>
+        <kbd>→ Custom → Import</kbd>: Enter `https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt`<sup><a href="https://github.com/DandelionSprout/adfilt/blob/master/LegitimateURLShortener.txt">GitHub</a></sup>
+        <kbd>Apply changed</kbd>
   - **Smart Referer**  
     <kbd>Preferences → Whitelist Sources</kbd>: Disable "Use default whitelist"
   - **Sidebery**  
