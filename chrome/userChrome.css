@@ -1,4 +1,4 @@
-@import url("Lepton/userChrome.css");
+/* @import url("Lepton/userChrome.css"); */
 
 /** Sections with the same names are generally mutually exclusive.
  * To disable a section, surround it in `@media DISABLED {}`.
@@ -177,7 +177,7 @@
  * Moves tabbar above sidebar.
  * Doesn't work well with Lepton.
  */
-@media DISABLED {
+@media {
   #main-window[titlepreface*="🦊 "] .tabbrowser-tab {
     visibility: collapse !important;
   }
