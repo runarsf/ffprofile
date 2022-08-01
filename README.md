@@ -9,21 +9,21 @@
 3. Customize toolbar
 4. Remove default bookmarks-row items
 5. Set up extensions
-  - **CanvasBlocker**  
-    <kbd>Preferences → APIs</kbd>: Disable everything except Canvas and Audio.
-  - **Terms of Service; Didn't Read**  
-    <kbd>Preferences</kbd>: Disable "Send Notifications"
-  - **Ublock Origin**  
-    <kbd>Preferences → Filter lists ⇢</kbd>  
-      &nbsp;&nbsp;&nbsp;&nbsp;<kbd>→ Privacy</kbd>: Enable "ADGuard URL Tracking Protection"  
-      &nbsp;&nbsp;&nbsp;&nbsp;<kbd>→ Custom → Import</kbd>: Enter `https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt`<sup><a href="https://github.com/DandelionSprout/adfilt/blob/master/LegitimateURLShortener.txt">GitHub</a></sup>  
-      <kbd>Apply changes</kbd>
-  - **Smart Referer**  
-    <kbd>Preferences → Whitelist Sources</kbd>: Disable "Use default whitelist"
-  - **Sidebery**  
-    <kbd>Preferences → Help → Import</kbd>: Import `./preferences/sidebery.json`
-  - **I don't care about cookies**  
-    <kbd>Manage</kbd>: Enable "Run in Private Windows"
+    - **CanvasBlocker**  
+        <kbd>Preferences → APIs</kbd>: Disable everything except Canvas and Audio.
+    - **Terms of Service; Didn't Read**  
+        <kbd>Preferences</kbd>: Disable "Send Notifications"
+    - **Ublock Origin**  
+        <kbd>Preferences → Filter lists ⇢</kbd>  
+        &nbsp;&nbsp;&nbsp;&nbsp;<kbd>→ Privacy</kbd>: Enable "ADGuard URL Tracking Protection"  
+        &nbsp;&nbsp;&nbsp;&nbsp;<kbd>→ Custom → Import</kbd>: Enter `https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt`<sup><a href="https://github.com/DandelionSprout/adfilt/blob/master/LegitimateURLShortener.txt">GitHub</a></sup>  
+        <kbd><b>Apply changes</b></kbd>
+    - **Smart Referer**  
+        <kbd>Preferences → Whitelist Sources</kbd>: Disable "Use default whitelist"
+    - **Sidebery**  
+        <kbd>Preferences → Help → Import</kbd>: Import `./preferences/sidebery.json`
+    - **I don't care about cookies**  
+        <kbd>Manage</kbd>: Enable "Run in Private Windows"
 
 
 ### Existing profile
