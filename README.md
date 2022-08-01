@@ -4,7 +4,7 @@
 ## Setup
 
 1. Set up repo in a [new profile](#new-profile) or use an [existing one](#existing-profile)
-2. Sign In and Sync.
+2. Sign In and Sync.  
   <kbd>Settings → Sync → Choose What To Sync → Change...</kbd>: Bookmarks, Add-ons, Settings.
 3. Customize toolbar
 4. Remove default bookmarks-row items
