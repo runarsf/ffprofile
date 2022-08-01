@@ -299,6 +299,8 @@
   /*#urlbar .search-one-offs:not([hidden]),*/
   #back-button[disabled="true"],
   #forward-button[disabled="true"],
+  #reload-button[disabled="true"],
+  .urlbarView-row[type="tip"], /* remove "refresh firefo" button */
   .panel-subview-body toolbarseparator:not(:first-of-type),
   #appMenu-new-tab-button2,
   #appMenu-new-window-button2,
@@ -338,7 +340,7 @@
   #context-back[disabled="true"],
   #context-forward[disabled="true"] {
     visibility: collapse;
-    /* display: none; */
+    display: none;
   }
   
   /* Smaller buttons */

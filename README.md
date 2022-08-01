@@ -65,6 +65,7 @@ firefox about:profiles
 
 ## Other things
 
+- https://coveryourtracks.eff.org/
 - find what options changes in  [about:config](about:config): `diff <(cat prefs.js) <(sleep 5; cat prefs.js)`
 - https://github.com/arkenfox/user.js/issues/1080
 - If you're using GitHub Desktop, you have to either enable *File > Options... > Advanced > Use system OpenSSH* or change the remote to use http auth (`git remote set-url https://github.com/runarsf/firefoxcss.git`).

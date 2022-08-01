@@ -3,6 +3,14 @@ user_pref("browser.search.hiddenOneOffs", "Google,SearX,SearXNG,Whoogle,Amazon.c
 
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 
+user_pref("devtools.screenshot.clipboard.enabled", true);
+user_pref("devtools.debugger.remote-enabled", true);
+user_pref("devtools.chrome.enabled", true);
+
+// Show bookmark bar only on new tabs
+// user_pref("browser.toolbars.bookmarks.2h2020", true);
+user_pref("browser.toolbars.bookmarks.visibility", "newtab");
+
 // Open previous windows and tabs / session restore
 user_pref("browser.startup.page", 3);
 user_pref("privacy.clearOnShutdown.history", false);
@@ -16,12 +24,24 @@ user_pref("privacy.resistFingerprinting", false);
 user_pref("privacy.resistFingerprinting.letterboxing", false);
 user_pref("webgl.disabled", false);
 
-// Keep site data on shutdown
-user_pref("network.cookie.lifetimePolicy", 2);
-user_pref("privacy.clearOnShutdown.cookies", false);
-user_pref("privacy.cpd.cookies", false);
+// [1001+2810+2801+2811+2820] Keep site data on shutdown
+user_pref("network.cookie.lifetimePolicy", 0);
+user_pref("privacy.clearOnShutdown.cache", false);
+user_pref("privacy.clearOnShutdown.downloads", true);
+user_pref("privacy.clearOnShutdown.formdata", true);
+user_pref("privacy.clearOnShutdown.history", false);
+user_pref("privacy.clearOnShutdown.sessions", false);
 user_pref("privacy.clearOnShutdown.offlineApps", false);
+user_pref("privacy.clearOnShutdown.cookies", false);
+user_pref("browser.cache.disk.enable", true);
+user_pref("privacy.sanitize.sanitizeOnShutdown", false);
+
+user_pref("privacy.cpd.cache", false);
+user_pref("privacy.cpd.formdata", true);
+user_pref("privacy.cpd.history", true);
+user_pref("privacy.cpd.sessions", false);
 user_pref("privacy.cpd.offlineApps", false);
+user_pref("privacy.cpd.cookies", false);
 
 user_pref("network.http.referer.XOriginPolicy", 0);
 
