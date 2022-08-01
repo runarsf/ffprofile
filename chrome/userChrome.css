@@ -8,6 +8,7 @@
  * TODO Line under navbar should be moved to below bookmarks bar when visible.
  */
 
+
 /** --- SIDEBAR {{{
  */
 @media {
@@ -295,6 +296,7 @@
   /*#library-button,*/
   /*#page-action-buttons,*/
   /*#tracking-protection-icon-container */
+  /*#urlbar .search-one-offs:not([hidden]),*/
   #back-button[disabled="true"],
   #forward-button[disabled="true"],
   .panel-subview-body toolbarseparator:not(:first-of-type),

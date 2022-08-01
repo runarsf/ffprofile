@@ -3,10 +3,28 @@
 
 ## Setup
 
-Replace `rice.dev-edition-default` with your preferred profile (*Root Directory* in [about:profiles](about:profiles)), `git@github.com:runarsf/ffprofile.git` with your Firefox rice-repo, and `main` with your remote branch.
+1. Set up repo in a [new profile](#new-profile) or use an [existing one](#existing-profile)
+2. Sign In and Sync. `Settings > Sync > Choose What To Sync > Change...`: Bookmarks, Add-ons, Settings.
+3. Customize toolbar
+4. Remove default bookmarks-row items
+5. Set up extensions, allow in incognito
+  - **CanvasBlocker**  
+    `Preferences > APIs`: Disable everything except Canvas and Audio.
+  - **Terms of Service; Didn't Read**  
+    `Preferences`: Disable "Send Notifications"
+  - **Ublock Origin**  
+    `Preferences > Filter lists >`  
+      `Privacy`: Enable "ADGuard URL Tracking Protection" > `Apply changes`  
+      `Custom > Import`: Enter `https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt`<sup><a href="https://github.com/DandelionSprout/adfilt/blob/master/LegitimateURLShortener.txt">GitHub</a></sup>
+  - **Smart Referer**  
+    `Preferences > Whitelist Sources`: Disable "Use default whitelist"
+  - **Sidebery**  
+    `Preferences > Help > Import`: `./preferences/sidebery.json`
+  - **I don't care about cookies**  
+    `Manage`: Enable "Run in Private Windows"
 
 
-### Existing Firefox profile
+### Existing profile
 
 ```bash
 cd rice.dev-edition-default
@@ -22,7 +40,8 @@ git branch --set-upstream-to=origin/main main
 ### New profile
 
 ```bash
-git clone git@github.com:runarsf/ffprofile.git
+cd ~/.mozilla/firefox
+git clone git@github.com:runarsf/ffprofile.git rice.dev-edition-default
 firefox about:profiles
 # Create New Profile > Next
 # Enter Profile Name: Rice
@@ -44,9 +63,14 @@ firefox about:profiles
 
 ## Other things
 
+- find what options changes in  [about:config](about:config): `diff <(cat prefs.js) <(sleep 5; cat prefs.js)`
+- https://github.com/arkenfox/user.js/issues/1080
 - If you're using GitHub Desktop, you have to either enable *File > Options... > Advanced > Use system OpenSSH* or change the remote to use http auth (`git remote set-url https://github.com/runarsf/firefoxcss.git`).
 - Check status with many files: `git status -uno` (https://stackoverflow.com/a/57514326)
 - https://ffprofile.com/
+- https://github.com/arkenfox/user.js
+- https://arkenfox.github.io/gui/
+- https://github.com/pyllyukko/user.js/blob/master/user.js
 - Profile suffixes - https://support.mozilla.org/gl/questions/1264072
   - Default: `.default-release`
   - Developer Edition: `.dev-edition-default`

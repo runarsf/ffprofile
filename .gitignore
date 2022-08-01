@@ -6,4 +6,10 @@
 !.gitignore
 !README.md
 !user.js
+!user-overrides.js
+!./updater.sh
+!./updater.bat
+!./prefsCleaner.sh
+!./prefsCleaner.bat
 !/chrome/
+!/preferences/
