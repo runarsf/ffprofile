@@ -4,24 +4,26 @@
 ## Setup
 
 1. Set up repo in a [new profile](#new-profile) or use an [existing one](#existing-profile)
-2. Sign In and Sync. `Settings > Sync > Choose What To Sync > Change...`: Bookmarks, Add-ons, Settings.
+2. Sign In and Sync.
+  <kbd>Settings → Sync → Choose What To Sync → Change...</kbd>: Bookmarks, Add-ons, Settings.
 3. Customize toolbar
 4. Remove default bookmarks-row items
-5. Set up extensions, allow in incognito
+5. Set up extensions
   - **CanvasBlocker**  
-    `Preferences > APIs`: Disable everything except Canvas and Audio.
+    <kbd>Preferences → APIs</kbd>: Disable everything except Canvas and Audio.
   - **Terms of Service; Didn't Read**  
-    `Preferences`: Disable "Send Notifications"
+    <kbd>Preferences</kbd>: Disable "Send Notifications"
   - **Ublock Origin**  
-    `Preferences > Filter lists >`  
-      `Privacy`: Enable "ADGuard URL Tracking Protection" > `Apply changes`  
-      `Custom > Import`: Enter `https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt`<sup><a href="https://github.com/DandelionSprout/adfilt/blob/master/LegitimateURLShortener.txt">GitHub</a></sup>
+    <kbd>Preferences → Filter lists</kbd>  
+      <kbd>→ Privacy</kbd>: Enable "ADGuard URL Tracking Protection"  
+      <kbd>→ Custom → Import</kbd>: Enter `https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt`<sup><a href="https://github.com/DandelionSprout/adfilt/blob/master/LegitimateURLShortener.txt">GitHub</a></sup>
+      <kbd>Apply changed</kbd>
   - **Smart Referer**  
-    `Preferences > Whitelist Sources`: Disable "Use default whitelist"
+    <kbd>Preferences → Whitelist Sources</kbd>: Disable "Use default whitelist"
   - **Sidebery**  
-    `Preferences > Help > Import`: `./preferences/sidebery.json`
+    <kbd>Preferences → Help → Import</kbd>: Import `./preferences/sidebery.json`
   - **I don't care about cookies**  
-    `Manage`: Enable "Run in Private Windows"
+    <kbd>Manage</kbd>: Enable "Run in Private Windows"
 
 
 ### Existing profile
