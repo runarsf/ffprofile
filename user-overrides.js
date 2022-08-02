@@ -146,6 +146,35 @@ user_pref("print.print_footerright", "");
 user_pref("print.print_headerleft", "");
 user_pref("print.print_headerright", "");
 
+// Always prompt for a container when opening a new tab
+// user_pref("privacy.userContext.newTabContainerOnLeftClick.enabled", true);
+
+// Use a different search engine in private mode
+user_pref("browser.search.separatePrivateDefault.ui.enabled", true);
+
+// Disable always opening download panel
+user_pref("browser.download.alwaysOpenPanel", false);
+
+/* 0 for no highlighting
+ * 1 for a dotted line
+ * 2 for long dots
+ * 3 for a single straight line
+ * 4 for a double underline
+ * 5 for the default squiggly line
+ */
+user_pref("layout.spellcheckDefault", 0); // Disable spell check
+// user_pref("browser.download.folderList", 1);
+// user_pref("browser.download.useDownloadDir", false); // Ask where to save files
+
+// Prevent sites from swap out memory when minimized
+user_pref("config.trim_on_minimize", false);
+
+// Disable firefox screenshots
+user_pref("extensions.screenshots.disabled", true);
+
+// Sync active theme
+user_pref("services.sync.prefs.sync.extensions.activeThemeID", true);
+
 // Privacy
 // user_pref("privacy.resistFingerprinting.block_mozAddonManager", true);
 user_pref("browser.send_pings", false);

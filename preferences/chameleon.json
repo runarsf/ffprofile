@@ -1,0 +1,92 @@
+{
+  "config": {
+    "enabled": true,
+    "notificationsEnabled": false,
+    "theme": "dark",
+    "hasPrivacyPermission": false
+  },
+  "excluded": [
+    "win1-edg",
+    "win1-esr",
+    "win1-esr2",
+    "win1-ff",
+    "win1-gcr",
+    "win1-ie",
+    "win2-edg",
+    "win2-esr",
+    "win2-esr2",
+    "win2-gcr",
+    "win2-ff",
+    "win2-ie",
+    "win3-edg",
+    "win3-esr2",
+    "win3-esr",
+    "win3-ff",
+    "win3-gcr",
+    "win3-ie",
+    "win4-ie",
+    "win4-edg",
+    "win4-gcr",
+    "win4-esr2",
+    "win4-esr"
+  ],
+  "headers": {
+    "blockEtag": true,
+    "enableDNT": false,
+    "referer": {
+      "disabled": false,
+      "xorigin": 1,
+      "trimming": 1
+    },
+    "spoofAcceptLang": {
+      "enabled": true,
+      "value": "en-US"
+    },
+    "spoofIP": {
+      "enabled": false,
+      "option": 0,
+      "rangeFrom": "",
+      "rangeTo": ""
+    }
+  },
+  "ipRules": [],
+  "options": {
+    "cookieNotPersistent": false,
+    "cookiePolicy": "reject_third_party",
+    "blockMediaDevices": false,
+    "blockCSSExfil": true,
+    "disableWebRTC": false,
+    "firstPartyIsolate": true,
+    "limitHistory": true,
+    "protectKBFingerprint": {
+      "enabled": false,
+      "delay": 1
+    },
+    "protectWinName": true,
+    "resistFingerprinting": true,
+    "screenSize": "1920x1080",
+    "spoofAudioContext": true,
+    "spoofClientRects": true,
+    "spoofFontFingerprint": false,
+    "spoofMediaDevices": false,
+    "timeZone": "Europe/Berlin",
+    "trackingProtectionMode": "always",
+    "webRTCPolicy": "default_public_interface_only",
+    "webSockets": "block_3rd_party"
+  },
+  "profile": {
+    "selected": "win4-ff",
+    "interval": {
+      "option": 60,
+      "min": 1,
+      "max": 1
+    },
+    "showProfileOnIcon": true
+  },
+  "version": "0.22.32.1",
+  "whitelist": {
+    "enabledContextMenu": false,
+    "defaultProfile": "none",
+    "rules": []
+  }
+}

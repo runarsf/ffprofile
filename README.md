@@ -65,6 +65,7 @@ firefox about:profiles
 
 ## Other things
 
+- https://www.reddit.com/r/firefox/wiki/useful-customizations/
 - https://coveryourtracks.eff.org/
 - find what options changes in  [about:config](about:config): `diff <(cat prefs.js) <(sleep 5; cat prefs.js)`
 - https://github.com/arkenfox/user.js/issues/1080
