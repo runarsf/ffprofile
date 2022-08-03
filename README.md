@@ -8,22 +8,31 @@
   <kbd>Settings → Sync → Choose What To Sync → Change...</kbd>: Bookmarks, Add-ons, Settings.
 3. Customize toolbar
 4. Remove default bookmarks-row items
-5. Set up extensions
-    - **CanvasBlocker**  
-        <kbd>Preferences → APIs</kbd>: Disable everything except Canvas and Audio.
-    - **Terms of Service; Didn't Read**  
-        <kbd>Preferences</kbd>: Disable "Send Notifications"
-    - **Ublock Origin**  
-        <kbd>Preferences → Filter lists ⇢</kbd>  
-        &nbsp;&nbsp;&nbsp;&nbsp;<kbd>→ Privacy</kbd>: Enable "ADGuard URL Tracking Protection"  
-        &nbsp;&nbsp;&nbsp;&nbsp;<kbd>→ Custom → Import</kbd>: Enter `https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt`<sup><a href="https://github.com/DandelionSprout/adfilt/blob/master/LegitimateURLShortener.txt">GitHub</a></sup>  
-        <kbd><b>Apply changes</b></kbd>
-    - **Smart Referer**  
-        <kbd>Preferences → Whitelist Sources</kbd>: Disable "Use default whitelist"
-    - **Sidebery**  
-        <kbd>Preferences → Help → Import</kbd>: Import `./preferences/sidebery.json`
-    - **I don't care about cookies**  
-        <kbd>Manage</kbd>: Enable "Run in Private Windows"
+5. <details><summary>Extension configuration&#8230;</summary>
+    <ul>
+        <li><b>CanvasBlocker</b><br>
+        <kbd>Preferences → APIs</kbd>: Disable everything except Canvas and Audio.</li>
+        <li><b>Terms of Service; Didn't Read</b><br>
+        <kbd>Preferences</kbd>: Disable "Send Notifications"</li>
+        <li><b>Ublock Origin</b><br>
+        <kbd>Preferences → Filter lists &#8230;</kbd><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<kbd>→ Privacy</kbd>: Enable "ADGuard URL Tracking Protection"<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<kbd>→ Custom → Import</kbd>: Enter <code>https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt</code><sup><a href="https://github.com/DandelionSprout/adfilt/blob/master/LegitimateURLShortener.txt">GitHub</a></sup><br>
+        <kbd><b>Apply changes</b></kbd></li>
+        <li><b>Smart Referer</b><br>
+        <kbd>Preferences → Whitelist Sources</kbd>: Disable "Use default whitelist"</li>
+        <li><b>Sidebery</b><br>
+        <kbd>Preferences → Help → Import</kbd>: <code><a href="https://raw.githubusercontent.com/runarsf/ffprofile/main/preferences/sidebery.json">./preferences/sidebery.json</a></code></li>
+        <li><b>Chameleon</b><br>
+        <kbd>Extension Popup → Settings → Import</kbd>: <code><a href="https://raw.githubusercontent.com/runarsf/ffprofile/main/preferences/chameleon.json">./preferences/chameleon.json</a></code></li>
+        <li><b>Enhancer for YouTube</b><br>
+        <kbd>Preferences → Backup → Import</kbd>: <code><a href="https://raw.githubusercontent.com/runarsf/ffprofile/main/preferences/enhancer-for-youtube.json">./preferences/enhancer-for-youtube.json</a></code></li>
+        <li><b>Imagus</b><br>
+        <kbd>Preferences → Info → Import</kbd>: <code><a href="https://raw.githubusercontent.com/runarsf/ffprofile/main/preferences/imagus.json">./preferences/imagus.json</a></code></li>
+        <li><b>I don't care about cookies</b><br>
+        <kbd>Manage</kbd>: Enable "Run in Private Windows"</li>
+    </ul>
+</details>
 
 
 ### Existing profile
