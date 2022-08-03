@@ -297,9 +297,9 @@
   /*#page-action-buttons,*/
   /*#tracking-protection-icon-container */
   /*#urlbar .search-one-offs:not([hidden]),*/
-  #back-button[disabled="true"],
-  #forward-button[disabled="true"],
-  #reload-button[disabled="true"],
+  #nav-bar:not([customizing="true"]) #back-button[disabled="true"],
+  #nav-bar:not([customizing="true"]) #forward-button[disabled="true"],
+  #nav-bar:not([customizing="true"]) #reload-button[disabled="true"],
   .urlbarView-row[type="tip"], /* remove "refresh firefo" button */
   .panel-subview-body toolbarseparator:not(:first-of-type),
   #appMenu-new-tab-button2,
