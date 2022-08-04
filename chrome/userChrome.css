@@ -8,7 +8,6 @@
  * TODO Line under navbar should be moved to below bookmarks bar when visible.
  */
 
-
 /** --- SIDEBAR {{{
  */
 @media {
@@ -186,7 +185,6 @@
     height: 40px !important;
   }
   #main-window[titlepreface*="🦊 "] #nav-bar:not([customizing="true"]) {
-    margin-top: -41px; /* --menubar-height */
     margin-right: 137px;
     box-shadow: none !important;
   }
@@ -199,6 +197,17 @@
   #main-window[titlepreface*="🦊 "] .titlebar-color {
     background-color: var(--toolbar-bgcolor);
   }
+  /* #main-window[titlepreface*="🦊 "][uidensity="compact"]  */
+  #main-window[titlepreface*="🦊 "]:not([uidensity="compact"]) #nav-bar:not([customizing="true"]) {
+    margin-top: -41px; /* --menubar-height */
+  }
+  #main-window[titlepreface*="🦊 "][uidensity="compact"] #nav-bar:not([customizing="true"]) {
+    margin-top: -36px; /* --menubar-height */
+  }
+  #main-window[titlepreface*="🦊 "][uidensity="compact"] .titlebar-buttonbox {
+    height: 36px !important;
+  }
+  
 } /* }}} */
 
 
