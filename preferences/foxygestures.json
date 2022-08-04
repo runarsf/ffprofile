@@ -1,0 +1,129 @@
+{
+  "timestamp": "2021-09-18T16:12:49.364Z",
+  "fileName": "foxyGestures.2021-09-18.json",
+  "addonId": "{e839c3f9-298e-4cd0-99e0-464431cb7c34}",
+  "version": "1.2.11",
+  "settings": {
+    "gestureTimeout": 2000,
+    "statusTimeout": 2000,
+    "showStatusText": true,
+    "blacklistUrlPatterns": [],
+    "whitelistMode": false,
+    "gestureDetector": {
+      "style": "cardinal"
+    },
+    "gestureButton": 2,
+    "gestureFidelity": 3,
+    "drawTrails": true,
+    "trailFidelity": 10,
+    "trailWidth": 2,
+    "trailColor": "#306998",
+    "mouseMappings": [
+      {
+        "gesture": "L",
+        "command": "historyBack"
+      },
+      {
+        "gesture": "R",
+        "command": "historyForward"
+      },
+      {
+        "command": "closeTab",
+        "gesture": "D"
+      },
+      {
+        "command": "newTab",
+        "gesture": "U"
+      },
+      {
+        "command": "userScript",
+        "gesture": "UR",
+        "userScript": "userScript:1631981461667"
+      },
+      {
+        "command": "undoCloseTab",
+        "gesture": "DU"
+      },
+      {
+        "command": "undoClose",
+        "gesture": "DUD"
+      },
+      {
+        "command": "reload",
+        "gesture": "DR"
+      },
+      {
+        "command": "showOnlyThisFrame",
+        "gesture": "DRL"
+      },
+      {
+        "command": "duplicateTab",
+        "gesture": "URL"
+      },
+      {
+        "command": "viewImage",
+        "gesture": "UL"
+      }
+    ],
+    "disableOnAlt": true,
+    "disableOnShift": true,
+    "canSelectStart": false,
+    "wheelGestures": false,
+    "wheelMappings": {
+      "up": null,
+      "down": null,
+      "left": null,
+      "right": null
+    },
+    "chordGestures": true,
+    "chordMappings": [
+      {
+        "chord": [
+          0,
+          2
+        ],
+        "mapping": {
+          "command": "nextTab"
+        }
+      },
+      {
+        "chord": [
+          2,
+          0
+        ],
+        "mapping": {
+          "command": "previousTab"
+        }
+      }
+    ],
+    "userScripts": [
+      {
+        "id": "userScript:1631981461667",
+        "label": "Open Link in New Background Temporary Container Tab",
+        "script": "const url = data.element && data.element.linkHref;\nif (url) {\n    browser.runtime.sendMessage('{c607c8df-14a7-4f28-894f-29e8722976af}', {\n        method: 'createTabInTempContainer',\n        active: false,\n        url\n    });\n}"
+      },
+      {
+        "id": "userScript:1631981440932",
+        "label": "Open New Temporary Container Tab",
+        "script": "browser.runtime.sendMessage('{c607c8df-14a7-4f28-894f-29e8722976af}', {\n    method: 'createTabInTempContainer'\n});"
+      },
+      {
+        "id": "userScript:1631981452532",
+        "label": "Open Link in New Temporary Container Tab",
+        "script": "const url = data.element && data.element.linkHref;\nif (url) {\n    browser.runtime.sendMessage('{c607c8df-14a7-4f28-894f-29e8722976af}', {\n        method: 'createTabInTempContainer',\n        active: true,\n        url\n    });\n}"
+      }
+    ],
+    "sawXSSWarning": true,
+    "scrollDuration": 500,
+    "scrollAmount": 100,
+    "nextTabWrap": true,
+    "newTabUrl": null,
+    "newWindowUrl": null,
+    "newPrivateWindowUrl": null,
+    "useRelPrevNext": true,
+    "insertRelatedTab": true,
+    "zoomStep": 0.1,
+    "activeTabAfterClose": "default",
+    "statusTemplate": "<div style=\"all: initial; display: block; position: fixed; bottom: 0; right: 0; z-index: 2147483647\">\r\n  <div style=\"all: initial; background: #fff; border: 1px solid #ccc; color: #333; font-family: sans-serif; font-size: 12px; padding: 2px\" data-mg-status></div>\r\n</div>"
+  }
+}

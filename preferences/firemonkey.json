@@ -1,0 +1,96 @@
+{
+  "autoUpdateInterval": "5",
+  "autoUpdateLast": 0,
+  "cmOptions": "",
+  "counter": true,
+  "customOptionsCSS": "",
+  "customPopupCSS": "",
+  "globalScriptExcludeMatches": "",
+  "sync": true,
+  "template": {
+    "css": "",
+    "js": ""
+  },
+  "_Vim Vixen Vix": {
+    "name": "Vim Vixen Vix",
+    "author": "-",
+    "description": "Fixes white bottom bar on dark themed web pages when using Vim Vixen - https://github.com/ueokande/vim-vixen/issues/1424",
+    "updateURL": "",
+    "version": "1.1",
+    "enabled": true,
+    "autoUpdate": false,
+    "userMeta": "",
+    "antifeatures": [],
+    "injectInto": "",
+    "require": [],
+    "requireRemote": [],
+    "resource": {},
+    "error": "",
+    "storage": {},
+    "grant": [
+      "GM_addStyle"
+    ],
+    "style": [],
+    "includes": [],
+    "excludes": [],
+    "container": [],
+    "userVar": {},
+    "preprocessor": "",
+    "i18n": {
+      "name": {},
+      "description": {}
+    },
+    "allFrames": false,
+    "js": "// ==UserScript==\n// @name        Vim Vixen Vix\n// @namespace   Violentmonkey Scripts\n// @match       *://*/*\n// @grant       GM_addStyle\n// @run-at      document-start\n// @version     1.1\n// @author      -\n// @description Fixes white bottom bar on dark themed web pages when using Vim Vixen - https://github.com/ueokande/vim-vixen/issues/1424\n// ==/UserScript==\nGM_addStyle(\".vimvixen-console-frame {height: 0px; color-scheme: light !important;}\");",
+    "css": "",
+    "matches": [
+      "*://*/*"
+    ],
+    "excludeMatches": [],
+    "includeGlobs": [],
+    "excludeGlobs": [],
+    "matchAboutBlank": false,
+    "runAt": "document_start"
+  },
+  "_FireFox Color Import Button": {
+    "name": "FireFox Color Import Button",
+    "author": "Yazaar",
+    "description": "Import button for Firefox Color",
+    "updateURL": "https://raw.githubusercontent.com/Yazaar/tampermonkey-scripts/master/FirefoxColorImportButton/FirefoxColorImportButton.user.js",
+    "version": "1.0.0",
+    "enabled": true,
+    "autoUpdate": false,
+    "userMeta": "",
+    "antifeatures": [],
+    "injectInto": "",
+    "require": [],
+    "requireRemote": [],
+    "resource": {},
+    "error": "",
+    "storage": {},
+    "grant": [
+      "none"
+    ],
+    "style": [],
+    "includes": [],
+    "excludes": [],
+    "container": [],
+    "userVar": {},
+    "preprocessor": "",
+    "i18n": {
+      "name": {},
+      "description": {}
+    },
+    "allFrames": false,
+    "js": "// ==UserScript==\n// @name         FireFox Color Import Button\n// @version      1.0.0\n// @description  Import button for Firefox Color\n// @author       Yazaar\n// @include      *color.firefox.com*\n// @downloadURL  https://raw.githubusercontent.com/Yazaar/tampermonkey-scripts/master/FirefoxColorImportButton/FirefoxColorImportButton.user.js\n// @grant        none\n// ==/UserScript==\n\n(function () {\n    'use strict';\n\n    function loop() {\n        if (changeQuote === true) {\n            var quoteElement = document.querySelector('.app-loading-indicator__quote');\n            var quoteAuthorElement = document.querySelector('.app-loading-indicator__attribution');\n            if (quoteElement !== null && quoteAuthorElement !== null) {\n                changeQuote = false;\n                quoteElement.innerText = 'Importing themes should never have been a hassle.';\n                quoteAuthorElement.innerText = '-Yazaar';\n            }\n        }\n        var exportBtn = document.querySelector('.Export');\n        if (exportBtn !== null) {\n            var importBtn = exportBtn.cloneNode(1);\n            importBtn.title = 'Import';\n            importBtn.querySelector('img').style.transform = 'rotate(180deg)';\n            importBtn.querySelector('span').innerText = 'Import';\n            importBtn.addEventListener('click', function () {\n                if (active === false) {\n                    active = true;\n                    importSect.style.display = 'flex';\n                }\n            });\n            exportBtn.parentNode.appendChild(importBtn);\n        } else {\n            setTimeout(loop, 100);\n        }\n    }\n\n    function buildSect() {\n        var e = document.createElement('section');\n        e.style.display = 'none';\n        e.style.flexDirection = 'column';\n        e.style.position = 'absolute';\n        e.style.transform = 'translate(-50%,-50%)';\n        e.style.left = '50%';\n        e.style.top = '50%';\n        e.style.zIndex = '999999';\n        e.style.background = 'rgba(0, 0, 0, .75)';\n        e.style.borderRadius = '1rem';\n        e.style.border = '#000000 .25rem solid';\n        e.style.maxWidth = '90vw';\n        e.style.maxHeight = '90vh';\n        e.style.padding = '1rem';\n        e.style.textAlign = 'center';\n        var text = document.createElement('p');\n        text.innerText = 'import manifest file';\n        text.style.margin = '0';\n        text.style.color = '#FFFFFF';\n        e.appendChild(text);\n        var text2 = document.createElement('p');\n        text2.innerText = 'upload file or paste data';\n        text2.style.margin = '.1rem 0 .5rem 0';\n        text2.style.color = '#FFFFFF';\n        e.appendChild(text2);\n        var fr = new FileReader();\n        fr.addEventListener('load', function () {\n            var importData = validateImport(this.result);\n            if (importData !== null) {\n                localStorage.setItem('THEME-' + new Date().getTime() + '-' + Math.floor(Math.random() * 900 + 100), importData);\n                window.location = location.origin + '?imported=1';\n                e.style.display = 'none';\n            } else {\n                freeze = true;\n                var prev = uploadFileBtn.innerText;\n                uploadFileBtn.innerText = 'invalid';\n                setTimeout(function () {\n                    uploadFileBtn.innerText = prev;\n                    freeze = false;\n                }, 2000);\n            }\n        });\n        var fileInput = document.createElement('input');\n        fileInput.type = 'file';\n        fileInput.addEventListener('input', function () {\n            if (freeze === true) {\n                return;\n            }\n            fr.readAsText(this.files[0]);\n        });\n        var uploadFileBtn = document.createElement('button');\n        uploadFileBtn.innerText = 'upload manifest.json';\n        uploadFileBtn.style.marginTop = '.2rem'\n        uploadFileBtn.style.background = '#000000';\n        uploadFileBtn.style.borderColor = 'rgb(100, 100, 100) rgb(50, 50, 50) rgb(50, 50, 50) rgb(100, 100, 100)';\n        uploadFileBtn.style.borderStyle = 'solid';\n        uploadFileBtn.style.borderWidth = '.2rem';\n        uploadFileBtn.style.color = '#FFFFFF';\n        uploadFileBtn.style.cursor = 'pointer';\n        uploadFileBtn.addEventListener('click', function () {\n            if (freeze === true) {\n                return;\n            }\n            fileInput.click();\n        });\n        e.appendChild(uploadFileBtn);\n        var text3 = document.createElement('p');\n        text3.innerText = 'OR';\n        text3.style.margin = '.1rem 0';\n        text3.style.color = '#FFFFFF';\n        e.appendChild(text3);\n        var inputField = document.createElement('input');\n        inputField.type = 'text';\n        inputField.style.background = 'rgba(0, 0, 0, .2)';\n        inputField.style.border = 'rgba(0, 0, 0, .5) .2rem solid';\n        inputField.style.color = '#FFFFFF';\n        inputField.style.borderRadius = '.5rem';\n        e.appendChild(inputField);\n        var importBtn = document.createElement('button');\n        importBtn.addEventListener('click', function () {\n            if (freeze === true) {\n                return;\n            }\n            var importData = validateImport(inputField.value);\n            if (importData !== null) {\n                localStorage.setItem('THEME-' + new Date().getTime() + '-' + Math.floor(Math.random() * 900 + 100), importData);\n                window.location = location.origin + '?imported=1';\n                e.style.display = 'none';\n                freeze = false;\n            } else {\n                var prev = this.innerText;\n                this.innerText = 'invalid';\n                setTimeout(function () {\n                    importBtn.innerText = prev;\n                    freeze = false;\n                }, 2000);\n            }\n        });\n        importBtn.innerText = 'import';\n        importBtn.style.marginTop = '.2rem'\n        importBtn.style.background = '#000000';\n        importBtn.style.borderColor = 'rgb(100, 100, 100) rgb(50, 50, 50) rgb(50, 50, 50) rgb(100, 100, 100)';\n        importBtn.style.borderStyle = 'solid';\n        importBtn.style.borderWidth = '.2rem';\n        importBtn.style.color = '#FFFFFF';\n        importBtn.style.cursor = 'pointer';\n        e.appendChild(importBtn);\n        var cancelBtn = document.createElement('button');\n        cancelBtn.addEventListener('click', function () {\n            if (active === true) {\n                active = false;\n                inputField.value = '';\n                e.style.display = 'none';\n            }\n        });\n        cancelBtn.innerText = 'cancel';\n        cancelBtn.style.marginTop = '.5rem';\n        cancelBtn.style.background = '#000000';\n        cancelBtn.style.borderColor = 'rgb(100, 100, 100) rgb(50, 50, 50) rgb(50, 50, 50) rgb(100, 100, 100)';\n        cancelBtn.style.borderStyle = 'solid';\n        cancelBtn.style.borderWidth = '.2rem';\n        cancelBtn.style.color = '#FFFFFF';\n        cancelBtn.style.cursor = 'pointer';\n        e.appendChild(cancelBtn);\n        return e;\n    }\n\n    function validateImport(importData) {\n        try {\n            var data = JSON.parse(importData).theme;\n        } catch (e) {\n            return null;\n        }\n        if (data === undefined) {\n            return null;\n        }\n        var dataKeys = Object.keys(data.colors);\n        for (var i = 0; i < dataKeys.length; i++) {\n            var r = data.colors[dataKeys[i]].match(/^rgb\\(\\s*(\\d+)\\s*,\\s*(\\d+)\\s*,\\s*(\\d+)\\s*\\)$/);\n            if (r !== null) {\n                data.colors[dataKeys[i]] = {\n                    r: parseInt(r[1]),\n                    g: parseInt(r[2]),\n                    b: parseInt(r[3])\n                };\n            } else {\n                r = data.colors[dataKeys[i]].match(/^rgba\\(\\s*(\\d+)\\s*,\\s*(\\d+)\\s*,\\s*(\\d+)\\s*,\\s*(\\d*\\.\\d+|\\d+)\\s*\\)$/);\n                if (r !== null) {\n                    data.colors[dataKeys[i]] = {\n                        r: parseInt(r[1]),\n                        g: parseInt(r[2]),\n                        b: parseInt(r[3]),\n                        a: parseInt(r[4])\n                    };\n                } else {\n                    return null;\n                }\n            }\n        }\n        if (data === undefined) {\n            return null;\n        }\n        return JSON.stringify({\n            theme: data,\n            modified: new Date().getTime()\n        });\n    }\n    var changeQuote = new URLSearchParams(location.search).get('imported') === '1';\n    var active = false;\n    var freeze = false;\n    var importSect = buildSect();\n    document.body.appendChild(importSect);\n    loop();\n})();",
+    "css": "",
+    "matches": [],
+    "excludeMatches": [],
+    "includeGlobs": [
+      "*color.firefox.com*"
+    ],
+    "excludeGlobs": [],
+    "matchAboutBlank": false,
+    "runAt": "document_idle"
+  }
+}

@@ -29,6 +29,11 @@
         <kbd>Preferences → Backup → Import</kbd>: <code><a href="https://raw.githubusercontent.com/runarsf/ffprofile/main/preferences/enhancer-for-youtube.json">./preferences/enhancer-for-youtube.json</a></code></li>
         <li><b>Imagus</b><br>
         <kbd>Preferences → Info → Import</kbd>: <code><a href="https://raw.githubusercontent.com/runarsf/ffprofile/main/preferences/imagus.json">./preferences/imagus.json</a></code></li>
+		<li><b>Firemonkey</b><br>
+        <kbd>Preferences → Settings → Import</kbd>: <code><a href="https://raw.githubusercontent.com/runarsf/ffprofile/main/preferences/firemonkey.json">./preferences/firemonkey.json</a></code><br>
+		<code><b>Save</b></code></li>
+		<li><b>Foxy Gestures</b><br>
+        <kbd>Preferences → Backup & Restore → Restore settings from file</kbd>: <code><a href="https://raw.githubusercontent.com/runarsf/ffprofile/main/preferences/foxygestures.json">./preferences/foxygestures.json</a></code></li>
         <li><b>I don't care about cookies</b><br>
         <kbd>Manage</kbd>: Enable "Run in Private Windows"</li>
     </ul>
