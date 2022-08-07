@@ -172,6 +172,8 @@ user_pref("layout.spellcheckDefault", 0); // Disable spell check
 // Prevent sites from swap out memory when minimized
 user_pref("config.trim_on_minimize", false);
 
+user_pref("browser.disableResetPrompt", true);
+
 // Disable firefox screenshots
 user_pref("extensions.screenshots.disabled", true);
 

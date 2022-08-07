@@ -15,6 +15,7 @@
         <li><b>Terms of Service; Didn't Read</b><br>
         <kbd>Preferences</kbd>: Disable "Send Notifications"</li>
         <li><b>Ublock Origin</b><br>
+        <kbd>Manage</kbd>: Enable "Run in Private Windows"</li>
         <kbd>Preferences → Filter lists &#8230;</kbd><br>
         &nbsp;&nbsp;&nbsp;&nbsp;<kbd>→ Privacy</kbd>: Enable "ADGuard URL Tracking Protection"<br>
         &nbsp;&nbsp;&nbsp;&nbsp;<kbd>→ Custom → Import</kbd>: Enter <code>https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt</code><sup><a href="https://github.com/DandelionSprout/adfilt/blob/master/LegitimateURLShortener.txt">GitHub</a></sup><br>
@@ -29,10 +30,10 @@
         <kbd>Preferences → Backup → Import</kbd>: <code><a href="https://raw.githubusercontent.com/runarsf/ffprofile/main/preferences/enhancer-for-youtube.json">./preferences/enhancer-for-youtube.json</a></code></li>
         <li><b>Imagus</b><br>
         <kbd>Preferences → Info → Import</kbd>: <code><a href="https://raw.githubusercontent.com/runarsf/ffprofile/main/preferences/imagus.json">./preferences/imagus.json</a></code></li>
-		<li><b>Violentmonkey</b><br>
+        <li><b>Violentmonkey</b><br>
         <kbd>Preferences → Settings → Import from zip</kbd>: <code><a href="https://raw.githubusercontent.com/runarsf/ffprofile/main/preferences/violentmonkey.zip">./preferences/violentmonkey.zip</a></code><br>
-		<code><b>Save</b></code></li>
-		<li><b>Foxy Gestures</b><br>
+        <code><b>Save</b></code></li>
+        <li><b>Foxy Gestures</b><br>
         <kbd>Preferences → Backup & Restore → Restore settings from file</kbd>: <code><a href="https://raw.githubusercontent.com/runarsf/ffprofile/main/preferences/foxygestures.json">./preferences/foxygestures.json</a></code></li>
         <li><b>I don't care about cookies</b><br>
         <kbd>Manage</kbd>: Enable "Run in Private Windows"</li>
