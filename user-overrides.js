@@ -174,6 +174,9 @@ user_pref("config.trim_on_minimize", false);
 
 user_pref("browser.disableResetPrompt", true);
 
+// Load extension updates in the background
+// user_pref("browser.tabs.loadDivertedInBackground", true);
+
 // Disable firefox screenshots
 user_pref("extensions.screenshots.disabled", true);
 
