@@ -51,6 +51,7 @@ git pull origin main
 # If there are conflicting files, remove local conflicts and pull again
 git checkout main
 git branch --set-upstream-to=origin/main main
+git config --local core.hooksPath ./dev/hooks
 ```
 
 
@@ -59,6 +60,7 @@ git branch --set-upstream-to=origin/main main
 ```bash
 cd ~/.mozilla/firefox
 git clone git@github.com:runarsf/ffprofile.git rice.dev-edition-default
+git config --local core.hooksPath ./dev/hooks
 firefox about:profiles
 # Create New Profile > Next
 # Enter Profile Name: Rice

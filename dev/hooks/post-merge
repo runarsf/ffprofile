@@ -1,0 +1,11 @@
+#!/bin/sh
+
+. "$(git --exec-path)/git-sh-setup"
+
+GIT_WORKING_TREE="$(git rev-parse --show-toplevel)"
+
+printf "** Updating user.js ...\n"
+"${GIT_WORKING_TREE}/updater.sh"
+
+printf "** Cleaning prefs.js ...\n"
+"${GIT_WORKING_TREE}/prefsCleaner.sh"

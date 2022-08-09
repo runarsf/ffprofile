@@ -11,5 +11,6 @@
 !updater.bat
 !prefsCleaner.sh
 !prefsCleaner.bat
+!/dev/
 !/chrome/
 !/preferences/
