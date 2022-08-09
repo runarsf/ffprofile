@@ -5,7 +5,7 @@
 GIT_WORKING_TREE="$(git rev-parse --show-toplevel)"
 
 printf "** Updating user.js ...\n"
-"${GIT_WORKING_TREE}/updater.sh"
+yes Y | "${GIT_WORKING_TREE}/updater.sh"
 
 printf "** Cleaning prefs.js ...\n"
-"${GIT_WORKING_TREE}/prefsCleaner.sh"
+yes 1 | "${GIT_WORKING_TREE}/prefsCleaner.sh"

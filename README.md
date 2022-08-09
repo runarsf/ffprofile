@@ -1,4 +1,4 @@
-# Firefox Profile 🦊 
+# Firefox Profile 🦊
 
 
 ## Setup
