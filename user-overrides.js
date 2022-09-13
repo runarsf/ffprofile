@@ -91,18 +91,18 @@ user_pref("browser.tabs.tabClipWidth", 83); // 140 default
 // Change URL-bar suggestions
 user_pref("browser.urlbar.suggest.bestmatch", true);
 user_pref("browser.urlbar.suggest.bookmark", true);
-user_pref("browser.urlbar.suggest.engines", false);
 user_pref("browser.urlbar.suggest.history", true);
-user_pref("browser.urlbar.suggest.openpage", false);
-user_pref("browser.urlbar.suggest.remotetab", true);
-user_pref("browser.urlbar.suggest.topsites", false);
 user_pref("browser.urlbar.suggest.calculator", true);
 user_pref("browser.urlbar.unitConversion.enabled", true);
+user_pref("browser.urlbar.suggest.engines", false);
+user_pref("browser.urlbar.suggest.openpage", false);
+user_pref("browser.urlbar.suggest.remotetab", false);
+user_pref("browser.urlbar.suggest.topsites", false);
 
 // Allow searching with keywords
 user_pref("keyword.enabled", true);
-user_pref("browser.search.suggest.enabled", true);
-user_pref("browser.urlbar.suggest.searches", true);
+user_pref("browser.search.suggest.enabled", false);
+user_pref("browser.urlbar.suggest.searches", false);
 
 // Allow extensions to hide tabs
 user_pref("extensions.webextensions.tabhide.enabled", true);

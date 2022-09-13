@@ -117,14 +117,14 @@
 
 .Tab[data-lvl] { padding-left: 0; }
 .Tab[data-lvl="0"] { max-width: calc(100% - 10px); }
-.Tab[data-lvl="1"] { max-width: calc(100% - 20px); }
-.Tab[data-lvl="2"] { max-width: calc(100% - 30px); }
-.Tab[data-lvl="3"] { max-width: calc(100% - 40px); }
-.Tab[data-lvl="4"] { max-width: calc(100% - 50px); }
-.Tab[data-lvl="5"] { max-width: calc(100% - 60px); }
-.Tab[data-lvl="6"] { max-width: calc(100% - 70px); }
-.Tab[data-lvl="7"] { max-width: calc(100% - 80px); }
-.Tab[data-lvl="8"] { max-width: calc(100% - 90px); }
+.Tab[data-lvl="1"] { max-width: calc(100% - 35px); }
+.Tab[data-lvl="2"] { max-width: calc(100% - 50px); }
+.Tab[data-lvl="3"] { max-width: calc(100% - 65px); }
+.Tab[data-lvl="4"] { max-width: calc(100% - 80px); }
+.Tab[data-lvl="5"] { max-width: calc(100% - 95px); }
+.Tab[data-lvl="6"] { max-width: calc(100% - 110px); }
+.Tab[data-lvl="7"] { max-width: calc(100% - 125px); }
+.Tab[data-lvl="8"] { max-width: calc(100% - 140px); }
 
 /*
 .PinnedDock {
