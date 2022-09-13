@@ -26,6 +26,8 @@
         <kbd>Preferences → Help → Import</kbd>: <code><a href="https://raw.githubusercontent.com/runarsf/ffprofile/main/preferences/sidebery.json">./preferences/sidebery.json</a></code></li>
         <li><b>Chameleon</b><br>
         <kbd>Extension Popup → Settings → Import</kbd>: <code><a href="https://raw.githubusercontent.com/runarsf/ffprofile/main/preferences/chameleon.json">./preferences/chameleon.json</a></code></li>
+		<li><b>Forget Me Not</b><br>
+        <kbd>Extension Popup → Settings → General → Import..</kbd>: <code><a href="https://raw.githubusercontent.com/runarsf/ffprofile/main/preferences/forget-me-not.json">./preferences/forget-me-not.json</a></code></li>
         <li><b>Enhancer for YouTube</b><br>
         <kbd>Preferences → Backup → Import</kbd>: <code><a href="https://raw.githubusercontent.com/runarsf/ffprofile/main/preferences/enhancer-for-youtube.json">./preferences/enhancer-for-youtube.json</a></code></li>
         <li><b>Imagus</b><br>
