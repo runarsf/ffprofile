@@ -1,0 +1,24 @@
+{
+    "createdBy": "Redirector v3.5.3",
+    "createdAt": "2022-09-25T11:45:14.289Z",
+    "redirects": [
+        {
+            "description": "YT Shorts to Normal",
+            "exampleUrl": "https://www.youtube.com/shorts/someid",
+            "exampleResult": "https://www.youtube.com/v/someid",
+            "error": null,
+            "includePattern": "https://www.youtube.com/shorts/*",
+            "excludePattern": "",
+            "patternDesc": "Some ID",
+            "redirectUrl": "https://www.youtube.com/v/$1",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame",
+                "history"
+            ]
+        }
+    ]
+}

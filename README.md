@@ -1,10 +1,10 @@
-# Firefox Profile 🦊 
+# Firefox Profile 🦊
 
 
 ## Setup
 
 1. Set up repo in a [new profile](#new-profile) or use an [existing one](#existing-profile)
-2. Sign In and Sync  
+2. Sign In and Sync
   <kbd>Settings → Sync → Choose What To Sync → Change...</kbd>: Bookmarks, Add-ons, Settings.
 3. Customize toolbar
 4. Remove default bookmarks-row items
@@ -35,6 +35,8 @@
         <li><b>Violentmonkey</b><br>
         <kbd>Preferences → Settings → Import from zip</kbd>: <code><a href="https://raw.githubusercontent.com/runarsf/ffprofile/main/preferences/violentmonkey.zip">./preferences/violentmonkey.zip</a></code><br>
         <code><b>Save</b></code></li>
+        <li><b>Redirector</b><br>
+        <kbd>Options → Edit Redirects → Import</kbd>: <code><a href="https://raw.githubusercontent.com/runarsf/ffprofile/main/preferences/redirector.json">./preferences/redirector.json</a></code></li>
         <li><b>Foxy Gestures</b><br>
         <kbd>Preferences → Backup & Restore → Restore settings from file</kbd>: <code><a href="https://raw.githubusercontent.com/runarsf/ffprofile/main/preferences/foxygestures.json">./preferences/foxygestures.json</a></code></li>
         <li><b>I don't care about cookies</b><br>
