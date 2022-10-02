@@ -39,7 +39,7 @@
         <kbd>Options → Edit Redirects → Import</kbd>: <code><a href="https://raw.githubusercontent.com/runarsf/ffprofile/main/preferences/redirector.json">./preferences/redirector.json</a></code></li>
         <li><b>Foxy Gestures</b><br>
         <kbd>Preferences → Backup & Restore → Restore settings from file</kbd>: <code><a href="https://raw.githubusercontent.com/runarsf/ffprofile/main/preferences/foxygestures.json">./preferences/foxygestures.json</a></code></li>
-        <li><b>I don't care about cookies</b><br>
+        <li><b>I still don't care about cookies</b><br>
         <kbd>Manage</kbd>: Enable "Run in Private Windows"</li>
     </ul>
 </details>
