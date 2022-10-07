@@ -1,11 +1,34 @@
 #!/bin/sh
+set -e
 
-. "$(git --exec-path)/git-sh-setup"
+source "$(git --exec-path)/git-sh-setup" # For some reason `|| :` doesn't work
 
 GIT_WORKING_TREE="$(git rev-parse --show-toplevel)"
 
-printf "** Updating user.js ...\n"
-yes Y | "${GIT_WORKING_TREE}/updater.sh"
+/usr/bin/expect -f <(cat << EOEXPECT
+  set force_conservative 0
+  if {\$force_conservative} {
+    set send_slow {1 .1}
+    proc send {ignore arg} {
+      sleep .1
+      exp_send -s -- \$arg
+    }
+  }
 
-printf "** Cleaning prefs.js ...\n"
-yes 1 | "${GIT_WORKING_TREE}/prefsCleaner.sh"
+  set timeout -1
+  match_max 100000
+
+  exec >@stdout 2>@stderr printf "** Updating user.js ...\n"
+  spawn "${GIT_WORKING_TREE}/updater.sh"
+  expect "Continue Y/N?"
+  send -- "Y"
+
+  exec >@stdout 2>@stderr printf "\n\n** Cleaning prefs.js ...\n"
+  spawn "${GIT_WORKING_TREE}/prefsCleaner.sh"
+  expect "#? "
+  send -- "1\r"
+
+  expect eof
+EOEXPECT
+)
+
