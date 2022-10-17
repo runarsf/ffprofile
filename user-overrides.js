@@ -10,6 +10,9 @@ user_pref("devtools.chrome.enabled", true);
 // Disable PiP
 user_pref("media.videocontrols.picture-in-picture.video-toggle.enabled", false);
 
+// Remedy "Firefox can’t establish a connection to the server at localhost"
+user_pref("network.dns.disableIPv6", false);
+
 // Show bookmark bar only on new tabs
 // user_pref("browser.toolbars.bookmarks.2h2020", true);
 user_pref("browser.toolbars.bookmarks.visibility", "newtab");
