@@ -1367,7 +1367,6 @@ user_pref("security.pki.sha1_enforcement_level", 1); // [DEFAULT: 1 FF102+]
 
 /* END: internal custom pref to test for syntax errors ***/
 user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!");
-
 // Remove "this time search with"
 user_pref("browser.search.hiddenOneOffs", "Google,SearX,SearXNG,Whoogle,Amazon.com,Bing,DuckDuckGo,Wikipedia (en),ToS;DR Search,Bookmarks,Tabs,History,Actions");
 
