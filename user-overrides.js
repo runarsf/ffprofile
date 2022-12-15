@@ -288,6 +288,9 @@ user_pref("experiments.supported", false);
 user_pref("browser.tabs.drawInTitlebar", true);
 user_pref("browser.tabs.inTitlebar",        1); // Nightly, 96 Above
 
+// Re-enable overflow menu for extensions
+user_pref("extensions.unifiedExtensions.enabled", false);
+
 // ** Scrolling Settings *******************************************************
 // == Only Sharpen Scrolling ===================================================
 //         Pref                                             Value      Original
