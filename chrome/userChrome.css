@@ -87,7 +87,7 @@
       border-inline: 1px solid var(--chrome-content-separator-color) !important;
       border-inline-width: 0px 1px;
     }
-  }  
+  }
   
   #main-window[sizemode="fullscreen"] #sidebar-box { --uc-sidebar-width: 1px; }
   #sidebar-box:not([positionend]) > :-moz-locale-dir(rtl),
@@ -177,7 +177,7 @@
  * Moves tabbar above sidebar.
  * Doesn't work well with Lepton.
  */
-@media {
+@media DISABLED {
   #main-window[titlepreface*="🦊 "] .tabbrowser-tab {
     visibility: collapse !important;
   }
