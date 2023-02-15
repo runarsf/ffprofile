@@ -5,12 +5,9 @@
 # Except...
 !.gitignore
 !README.md
-!user.js
 !user-overrides.js
-!updater.sh
-!updater.bat
-!prefsCleaner.sh
-!prefsCleaner.bat
+!updater.*
+!prefsCleaner.*
 !/dev/
 !/chrome/
 !/preferences/

@@ -7,8 +7,8 @@ user_pref("devtools.screenshot.clipboard.enabled", true);
 user_pref("devtools.debugger.remote-enabled", true);
 user_pref("devtools.chrome.enabled", true);
 
-// Disable PiP
-user_pref("media.videocontrols.picture-in-picture.video-toggle.enabled", false);
+// PiP
+user_pref("media.videocontrols.picture-in-picture.video-toggle.enabled", true);
 
 // Remedy "Firefox can’t establish a connection to the server at localhost"
 user_pref("network.dns.disableIPv6", false);
@@ -194,7 +194,7 @@ user_pref("browser.send_pings", false);
 user_pref("alerts.useSystemBackend", true);
 user_pref("extensions.pocket.enabled", false);
 user_pref("ui.key.menuAccessKeyFocuses", false);
-user_pref("media.block-autoplay-until-in-foreground", true);
+user_pref("media.block-autoplay-until-in-foreground", false);
 /* The resolver mode.
  *  0 - Off (default). use standard native resolving only (don't use TRR at all)
  *  1 - Reserved (used to be Race mode)
