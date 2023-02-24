@@ -19,6 +19,7 @@ user_pref("browser.toolbars.bookmarks.visibility", "newtab");
 
 // Open previous windows and tabs / session restore
 user_pref("browser.startup.page", 3);
+user_pref("browser.startup.homepage", "");
 user_pref("privacy.clearOnShutdown.history", false);
 
 // Enable DRM
