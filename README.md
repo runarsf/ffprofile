@@ -56,6 +56,7 @@ git pull origin main
 git checkout main
 git branch --set-upstream-to=origin/main main
 git config --local core.hooksPath ./dev/hooks
+./dev/hooks/post-merge
 ```
 
 
@@ -64,12 +65,14 @@ git config --local core.hooksPath ./dev/hooks
 ```bash
 cd ~/.mozilla/firefox
 git clone git@github.com:runarsf/ffprofile.git rice.dev-edition-default
+cd rice.dev-edition-default
 git config --local core.hooksPath ./dev/hooks
 firefox about:profiles
 # Create New Profile > Next
 # Enter Profile Name: Rice
 # Choose Folder... > rice.dev-edition-default
 # Finish
+./dev/hooks/post-merge
 # Launch profile in new browser
 ```
 
