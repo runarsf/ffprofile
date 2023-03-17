@@ -1,0 +1,43 @@
+/* vivaldi://inspect/#apps
+ * "Vivaldi chrome-extension:/.../browser.html" > inspect
+ */
+
+.toolbar-droptarget .button-toolbar:not(.toolbar-spacer-flexible) button {
+    border-radius: var(--radius) !important;
+}
+
+.toolbar-droptarget .button-toolbar:not(.toolbar-spacer-flexible) button[disabled] {
+    display: none;
+    visibility: collapse;
+}
+
+.tab-strip .tab:not(.active):hover {
+    background-color: var(--colorHighlightBgAlpha) !important;
+}
+
+.tab-strip .tab {
+    border-radius: var(--radius) !important;
+    margin: 2px;
+    margin-top: 0;
+}
+
+/* Omnibox drop-down translucency */
+.OmniDropdown
+{
+    background: var(--colorBgAlpha);
+    backdrop-filter: blur(10px);
+}
+
+/* Quick command menu translucency */
+#modal-bg
+{
+    background-color: var(--colorBgAlpha);
+    backdrop-filter: blur(10px);
+}
+
+/* Sets the background color to any non-selected 
+ * element of the quick command menu to transparent */
+#modal-bg *:not([data-selected])
+{
+    background-color: rgba(0,0,0,0)!important;
+}
