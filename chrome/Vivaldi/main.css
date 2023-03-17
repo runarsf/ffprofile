@@ -1,6 +1,13 @@
-/* vivaldi://inspect/#apps
- * "Vivaldi chrome-extension:/.../browser.html" > inspect
+/* vivaldi://experiments/
+ *   Enable "Allow CSS modifications"
+ * vivaldi://inspect/#apps
+ *   "Vivaldi chrome-extension:/.../browser.html"
+ *   [inspect]
  */
+
+.qc-modal {
+    border-radius: var(--radius);
+}
 
 .toolbar-droptarget .button-toolbar:not(.toolbar-spacer-flexible) button {
     border-radius: var(--radius) !important;
