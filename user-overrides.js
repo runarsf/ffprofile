@@ -7,6 +7,9 @@ user_pref("devtools.screenshot.clipboard.enabled", true);
 user_pref("devtools.debugger.remote-enabled", true);
 user_pref("devtools.chrome.enabled", true);
 
+// Disable touch-screen scroll drag
+user_pref("apz.overscroll.enabled", false);
+
 // PiP
 user_pref("media.videocontrols.picture-in-picture.video-toggle.enabled", true);
 
