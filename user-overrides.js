@@ -28,6 +28,9 @@ user_pref("privacy.clearOnShutdown.history", false);
 // Enable DRM
 user_pref("media.eme.enabled", true);
 
+// Disable automatic translation popups
+user_pref("browser.translations.automaticallyPopup", false);
+
 // Disable RFP
 // Use Canvas Blocker with canvas + audio, rest is unnecessary
 user_pref("privacy.resistFingerprinting", false);
