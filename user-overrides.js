@@ -25,6 +25,10 @@ user_pref("browser.startup.page", 3);
 user_pref("browser.startup.homepage", "");
 user_pref("privacy.clearOnShutdown.history", false);
 
+user_pref("cookiebanners.service.mode", 2);
+user_pref("cookiebanners.service.mode.privateBrowsing", 1);
+user_pref("cookiebanners.bannerClicking.enabled", true);
+
 // Enable DRM
 user_pref("media.eme.enabled", true);
 
