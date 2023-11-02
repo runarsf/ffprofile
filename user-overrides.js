@@ -29,6 +29,9 @@ user_pref("cookiebanners.service.mode", 2);
 user_pref("cookiebanners.service.mode.privateBrowsing", 1);
 user_pref("cookiebanners.bannerClicking.enabled", true);
 
+// Don't close extension popups
+user_pref("ui.popup.disable_autohide", true);
+
 // Enable DRM
 user_pref("media.eme.enabled", true);
 
