@@ -133,7 +133,6 @@ user_pref("signon.rememberSignons", false);
  */
 user_pref("media.cache_readahead_limit", 9999); // 60 default
 user_pref("media.cache_resume_threshold", 9999); // 30 default
-// user_pref("network.dns.disablePrefetch", true);
 
 // Remove window-closing warning
 user_pref("browser.tabs.warnOnClose", false);
@@ -258,6 +257,15 @@ user_pref("network.allow-experiments", false);
  *  5 - Reject (known) trackers and partition third-party storage.
  */
 user_pref("network.cookie.cookieBehavior", 4);
+
+// No more flashbang!
+user_pref("browser.display.background_color", "#2B2A33");
+user_pref("browser.display.background_color.dark", "#2B2A33");
+user_pref("editor.background_color", "#000000");
+
+// https://www.reddit.com/r/firefox/comments/17gwb24/speculative_preload_and_crlite_2_builtin_options
+user_pref("network.dns.disablePrefetch", false);
+user_pref("network.dns.disablePrefetchFromHTTPS", false);
 // user_pref("network.dns.disablePrefetch", true);
 // user_pref("network.dns.disablePrefetchFromHTTPS", true);
 // user_pref("network.http.referer.spoofSource", true);
