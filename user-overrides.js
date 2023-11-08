@@ -266,8 +266,6 @@ user_pref("editor.background_color", "#000000");
 // https://www.reddit.com/r/firefox/comments/17gwb24/speculative_preload_and_crlite_2_builtin_options
 user_pref("network.dns.disablePrefetch", false);
 user_pref("network.dns.disablePrefetchFromHTTPS", false);
-// user_pref("network.dns.disablePrefetch", true);
-// user_pref("network.dns.disablePrefetchFromHTTPS", true);
 // user_pref("network.http.referer.spoofSource", true);
 // user_pref("network.http.speculative-parallel-limit", 0);
 // user_pref("network.predictor.enabled", false);

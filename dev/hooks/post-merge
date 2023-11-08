@@ -1,34 +1,40 @@
 #!/bin/sh
-set -e
+set -o errexit
 
 source "$(git --exec-path)/git-sh-setup" # For some reason `|| :` doesn't work
 
 GIT_WORKING_TREE="$(git rev-parse --show-toplevel)"
 
-/usr/bin/expect -f <(cat << EOEXPECT
-  set force_conservative 0
-  if {\$force_conservative} {
-    set send_slow {1 .1}
-    proc send {ignore arg} {
-      sleep .1
-      exp_send -s -- \$arg
-    }
-  }
+printf '** Updating user.js ...\n'
+"${GIT_WORKING_TREE}/updater.sh" -s -u
 
-  set timeout -1
-  match_max 100000
+printf '"\n\n** Cleaning prefs.js ...\n'
+"${GIT_WORKING_TREE}/prefsCleaner.sh" -s
 
-  exec >@stdout 2>@stderr printf "** Updating user.js ...\n"
-  spawn "${GIT_WORKING_TREE}/updater.sh"
-  expect "Continue Y/N?"
-  send -- "Y"
-
-  exec >@stdout 2>@stderr printf "\n\n** Cleaning prefs.js ...\n"
-  spawn "${GIT_WORKING_TREE}/prefsCleaner.sh"
-  expect "#? "
-  send -- "1\r"
-
-  expect eof
-EOEXPECT
-)
-
+# /usr/bin/expect -f <(cat << EOEXPECT
+#   set force_conservative 0
+#   if {\$force_conservative} {
+#     set send_slow {1 .1}
+#     proc send {ignore arg} {
+#       sleep .1
+#       exp_send -s -- \$arg
+#     }
+#   }
+# 
+#   set timeout -1
+#   match_max 100000
+# 
+#   exec >@stdout 2>@stderr printf "** Updating user.js ...\n"
+#   spawn "${GIT_WORKING_TREE}/updater.sh"
+#   expect "Continue Y/N?"
+#   send -- "Y"
+# 
+#   exec >@stdout 2>@stderr printf "\n\n** Cleaning prefs.js ...\n"
+#   spawn "${GIT_WORKING_TREE}/prefsCleaner.sh"
+#   expect "#? "
+#   send -- "1\r"
+# 
+#   expect eof
+# EOEXPECT
+# )
+# 
