@@ -6,12 +6,53 @@
  * TODO Line under navbar should be moved to below bookmarks bar when visible.
  */
 
+@media {
+  /* Hide discarded tabs */
+  .tabbrowser-tab[label^="💤 "] {
+    display: none !important;
+  }
+}
+
+/** --- SIDEBAR {{{ 
+ */
+@media {
+  :root {
+    --sidebar-hover-width: 36px;
+    --sidebar-visible-width: 200px;
+    --sidebar-debounce-delay: 50ms;
+  }
+  #sidebar-box[sidebarcommand*="_ccc8cbaa-3c36-46d1-b0ae-d5e122755901_-sidebar-action"] {
+    display: grid !important;
+    min-width: var(--sidebar-hover-width) !important;
+    max-width: var(--sidebar-hover-width) !important;
+    overflow: visible !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    max-height: 100% !important;
+  }
+  [sidebarcommand*="_ccc8cbaa-3c36-46d1-b0ae-d5e122755901_-sidebar-action"] > #sidebar {
+    height: 100% !important;
+    width: var(--sidebar-hover-width) !important;
+    z-index: 200 !important;
+    position: absolute !important;
+    transition: width 150ms var(--sidebar-debounce-delay) ease !important;
+    min-width: 0 !important;
+  }
+  [sidebarcommand*="_ccc8cbaa-3c36-46d1-b0ae-d5e122755901_-sidebar-action"] > #sidebar:hover {
+    width: var(--sidebar-visible-width) !important;
+  }
+
+  [sidebarcommand*="_ccc8cbaa-3c36-46d1-b0ae-d5e122755901_-sidebar-action"] #sidebar-header {
+	  display: none !important;
+  }
+} /* }}} */
+
+
 /** --- SIDEBAR {{{
  */
 @media {
   #sidebar-box[sidebarcommand*="tabcenter"] #sidebar-header,
   #sidebar-box[sidebarcommand*="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header,
-  #sidebar-box[sidebarcommand*="_ccc8cbaa-3c36-46d1-b0ae-d5e122755901_-sidebar-action"] #sidebar-header,
   #sidebar-box[sidebarcommand*="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar-header {
     visibility: collapse;
     display: none;
@@ -19,11 +60,6 @@
   
   #sidebar-box {
     background-color: transparent !important; 
-  }
-  
-  /* Hide discarded tabs */
-  .tabbrowser-tab[label^="💤 "] {
-    display: none !important;
   }
   
   /** Show sidebar only when the cursor is over it
@@ -35,7 +71,6 @@
 
   #sidebar-box[sidebarcommand*="tabcenter"],
   #sidebar-box[sidebarcommand*="treestyletab_piro_sakura_ne_jp-sidebar-action"],
-  #sidebar-box[sidebarcommand*="_ccc8cbaa-3c36-46d1-b0ae-d5e122755901_-sidebar-action"],
   #sidebar-box[sidebarcommand*="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
     --uc-sidebar-width: 48px !important; /* Sidebar-width collapsed */
     --uc-sidebar-hover-width: 225px; /* Sidebar-width on hover */
@@ -49,14 +84,12 @@
 
   #sidebar-box[sidebarcommand*="tabcenter"] > #sidebar-splitter,
   #sidebar-box[sidebarcommand*="treestyletab_piro_sakura_ne_jp-sidebar-action"] > #sidebar-splitter,
-  #sidebar-box[sidebarcommand*="_ccc8cbaa-3c36-46d1-b0ae-d5e122755901_-sidebar-action"] > #sidebar-splitter,
   #sidebar-box[sidebarcommand*="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] > #sidebar-splitter {
     display: none !important;
   }
 
   #sidebar-box[sidebarcommand*="tabcenter"] > #sidebar,
   #sidebar-box[sidebarcommand*="treestyletab_piro_sakura_ne_jp-sidebar-action"] > #sidebar,
-  #sidebar-box[sidebarcommand*="_ccc8cbaa-3c36-46d1-b0ae-d5e122755901_-sidebar-action"] > #sidebar,
   #sidebar-box[sidebarcommand*="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] > #sidebar {
     transition: min-width 115ms linear var(--uc-autohide-sidebar-delay) !important;
     min-width: var(--uc-sidebar-width) !important;
@@ -65,7 +98,6 @@
 
   #sidebar-box[sidebarcommand*="tabcenter"]:hover > #sidebar,
   #sidebar-box[sidebarcommand*="treestyletab_piro_sakura_ne_jp-sidebar-action"]:hover > #sidebar,
-  #sidebar-box[sidebarcommand*="_ccc8cbaa-3c36-46d1-b0ae-d5e122755901_-sidebar-action"]:hover > #sidebar,
   #sidebar-box[sidebarcommand*="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:hover > #sidebar {
     min-width: var(--uc-sidebar-hover-width) !important;
     transition-delay: 0ms !important;
@@ -74,14 +106,12 @@
   /* Not sure what this does */
   [sidebarcommand*="tabcenter"] .sidebar-panel,
   [sidebarcommand*="treestyletab_piro_sakura_ne_jp-sidebar-action"] .sidebar-panel,
-  [sidebarcommand*="_ccc8cbaa-3c36-46d1-b0ae-d5e122755901_-sidebar-action"] .sidebar-panel,
   [sidebarcommand*="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] .sidebar-panel {
     background-color: transparent !important;
     color: var(--newtab-text-primary-color) !important;
   }
   [sidebarcommand*="tabcenter"] .sidebar-panel #search-box,
   [sidebarcommand*="treestyletab_piro_sakura_ne_jp-sidebar-action"] .sidebar-panel #search-box,
-  [sidebarcommand*="_ccc8cbaa-3c36-46d1-b0ae-d5e122755901_-sidebar-action"] .sidebar-panel #search-box,
   [sidebarcommand*="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] .sidebar-panel #search-box {
     -moz-appearance: none !important;
     background-color: var(--chrome-secondary-background-color) /* rgba(249,249,250,0.1) */ !important; 
@@ -94,8 +124,6 @@
     #sidebar-box[sidebarcommand*="tabcenter"] > #sidebar-header,
     #sidebar-box[sidebarcommand*="treestyletab_piro_sakura_ne_jp-sidebar-action"] > #sidebar,
     #sidebar-box[sidebarcommand*="treestyletab_piro_sakura_ne_jp-sidebar-action"] > #sidebar-header,
-    #sidebar-box[sidebarcommand*="_ccc8cbaa-3c36-46d1-b0ae-d5e122755901_-sidebar-action"] > #sidebar,
-    #sidebar-box[sidebarcommand*="_ccc8cbaa-3c36-46d1-b0ae-d5e122755901_-sidebar-action"] > #sidebar-header,
     #sidebar-box[sidebarcommand*="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] > #sidebar,
     #sidebar-box[sidebarcommand*="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] > #sidebar-header {
       background-color: var(--toolbar-bgcolor) !important;
@@ -128,7 +156,6 @@
 @media DISABLED {
   #sidebar-box[sidebarcommand*="tabcenter"]:not([hidden]),
   #sidebar-box[sidebarcommand*="treestyletab_piro_sakura_ne_jp-sidebar-action"]:not([hidden]),
-  #sidebar-box[sidebarcommand*="_ccc8cbaa-3c36-46d1-b0ae-d5e122755901_-sidebar-action"]:not([hidden]),
   #sidebar-box[sidebarcommand*="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:not([hidden]) {
     display: block;
     position: absolute;
@@ -144,11 +171,9 @@
 
   [sidebarcommand*="tabcenter"] #sidebar,
   [sidebarcommand*="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar,
-  [sidebarcommand*="_ccc8cbaa-3c36-46d1-b0ae-d5e122755901_-sidebar-action"] #sidebar,
   [sidebarcommand*="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar,
   #sidebar-box[sidebarcommand*="tabcenter"]:hover,
   #sidebar-box[sidebarcommand*="treestyletab_piro_sakura_ne_jp-sidebar-action"]:hover,
-  #sidebar-box[sidebarcommand*="_ccc8cbaa-3c36-46d1-b0ae-d5e122755901_-sidebar-action"]:hover,
   #sidebar-box[sidebarcommand*="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:hover {
     min-width: 10vw !important;
     width: 30vw !important;
@@ -159,18 +184,15 @@
   @media (width >= 1200px) {
     [sidebarcommand*="tabcenter"] #sidebar,
     [sidebarcommand*="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar,
-    [sidebarcommand*="_ccc8cbaa-3c36-46d1-b0ae-d5e122755901_-sidebar-action"] #sidebar,
     [sidebarcommand*="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar,
     #sidebar-box[sidebarcommand*="tabcenter"]:hover,
     #sidebar-box[sidebarcommand*="treestyletab_piro_sakura_ne_jp-sidebar-action"]:hover,
-    #sidebar-box[sidebarcommand*="_ccc8cbaa-3c36-46d1-b0ae-d5e122755901_-sidebar-action"]:hover,
     #sidebar-box[sidebarcommand*="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:hover {
       max-width: 250px !important;
     }
   }
   [sidebarcommand*="tabcenter"] #sidebar,
   [sidebarcommand*="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar,
-  [sidebarcommand*="_ccc8cbaa-3c36-46d1-b0ae-d5e122755901_-sidebar-action"] #sidebar,
   [sidebarcommand*="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar {
     max-height: 100%;
     height: 100%;
@@ -178,7 +200,6 @@
 
   #sidebar-box[sidebarcommand*="tabcenter"]:not([hidden]) ~ #appcontent,
   #sidebar-box[sidebarcommand*="treestyletab_piro_sakura_ne_jp-sidebar-action"]:not([hidden]) ~ #appcontent,
-  #sidebar-box[sidebarcommand*="_ccc8cbaa-3c36-46d1-b0ae-d5e122755901_-sidebar-action"]:not([hidden]) ~ #appcontent,
   #sidebar-box[sidebarcommand*="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:not([hidden]) ~ #appcontent {
     margin-left: 48px;
   }
