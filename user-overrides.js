@@ -7,6 +7,8 @@ user_pref("devtools.screenshot.clipboard.enabled", true);
 user_pref("devtools.debugger.remote-enabled", true);
 user_pref("devtools.chrome.enabled", true);
 
+user_pref("ui.osk.enabled", true);
+
 // Disable touch-screen scroll drag
 user_pref("apz.overscroll.enabled", false);
 
