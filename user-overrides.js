@@ -16,6 +16,26 @@ user_pref("media.videocontrols.picture-in-picture.video-toggle.enabled", true);
 // Remedy "Firefox can’t establish a connection to the server at localhost"
 user_pref("network.dns.disableIPv6", false);
 
+user_pref("devtools.toolbox.zoomValue", 1.1);
+user_pref("devtools.toolbox.tabsOrder", "inspector,webconsole,storage,netmonitor,styleeditor,jsdebugger,@react-devtools,@react-devtools");
+user_pref("devtools.toolbox.host", "bottom");
+user_pref("devtools.toolbox.selectedTool", "webconsole");
+user_pref("devtools.cache.disabled", true);
+user_pref("devtools.webconsole.input.editorOnboarding", false);
+user_pref("devtools.screenshot.clipboard.enabled", true);
+user_pref("devtools.screenshot.audio.enabled", false);
+user_pref("devtools.responsive.touchSimulation.enabled", true);
+user_pref("devtools.responsive.showUserAgentInput", true);
+user_pref("devtools.netmonitor.persistlog", true);
+user_pref("devtools.inspector.three-pane-enabled", false);
+user_pref("devtools.inspector.activeSidebar", "computedview");
+user_pref("devtools.dom.enabled", false);
+user_pref("devtools.debugger.enabled", false);
+user_pref("devtools.command-button-measure.enabled", true);
+user_pref("devtools.application.enabled", false);
+user_pref("devtools.accessibility.enabled", false);
+user_pref("devtools.toolsidebar-width.inspector", 0);
+
 // Show bookmark bar only on new tabs
 // user_pref("browser.toolbars.bookmarks.2h2020", true);
 user_pref("browser.toolbars.bookmarks.visibility", "newtab");
